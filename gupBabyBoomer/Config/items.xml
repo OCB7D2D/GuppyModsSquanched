@@ -1,0 +1,24 @@
+<configs>
+
+<append xpath="/items">
+
+<item name="meleeHandZombieBaby">
+	<property name="Extends" value="meleeHandZombie01"/>
+	<property name="CreativeMode" value="None"/>
+  <property name="HoldType" value="12"/> 
+	<property class="Action0">
+		<property name="Range" value="1.65"/>
+		<property name="Sphere" value=".5"/>  
+		<property name="DamageEntity" value="2"/>
+		<property name="DamageBlock" value="5"/>
+	</property>
+	<effect_group name="meleeHandZombieStrong" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="buffBabyGoesBoom"/>
+    <triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="self" buff="buffBabyGoesBoom"/> 
+	</effect_group>
+</item>
+
+</append>
+
+</configs>

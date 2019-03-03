@@ -1,0 +1,57 @@
+<configs>
+	<append xpath="/blocks">
+
+		<block name="guppyHeadonSpear1">
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="16"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GuppySpearHeads.unity3d?guppyHead01"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+			<property name="CanPickup" value="true" param1="guppyHeadonSpear1"/>
+			<property name="CustomIcon" value="guppyHeadonSpear1"/>  
+		  	<property name="MultiBlockDim" value="1,2,1"/>
+		</block>
+
+		<block name="guppyHeadonSpear2">
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="16"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GuppySpearHeads.unity3d?guppyHead02"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+			<property name="CanPickup" value="true" param1="guppyHeadonSpear2"/>
+			<property name="CustomIcon" value="guppyHeadonSpear2"/>
+			<property name="MultiBlockDim" value="1,2,1"/>		  
+		</block>
+
+		<block name="guppyHeadonSpear3">
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="16"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GuppySpearHeads.unity3d?guppyHead03"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+			<property name="CanPickup" value="true" param1="guppyHeadonSpear3"/>
+			<property name="CustomIcon" value="guppyHeadonSpear3"/> 
+			<property name="MultiBlockDim" value="1,2,1"/>		  
+		</block>
+
+		<block name="guppyHeadonSpear4">
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="16"/>
+			<property name="Texture" value="282"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/GuppySpearHeads.unity3d?guppyHead04"/>
+			<property name="Collide" value="melee,bullet,arrow,rocket,movement"/>
+			<property name="CanPickup" value="true" param1="guppyHeadonSpear4"/>
+			<property name="CustomIcon" value="guppyHeadonSpear4"/>
+			<property name="MultiBlockDim" value="1,2,1"/>		  
+		</block>		
+
+	</append>
+</configs>

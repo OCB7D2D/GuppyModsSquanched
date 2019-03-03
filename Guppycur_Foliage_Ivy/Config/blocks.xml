@@ -1,0 +1,263 @@
+<configs>
+	<append xpath="/blocks">
+
+<block name="guppyAciacaTreeWithIvy01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyAciacaTreeWithIvy01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyAciacaTreeWithIvy01" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDarkGreenHangingIvyCenter">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDarkGreenHangingIvyCenter.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDarkGreenHangingIvyCenter" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDarkGreenHangingIvyDrape">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDarkGreenHangingIvyDrape.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDarkGreenHangingIvyDrape" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDarkGreenHangingIvyLeft">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDarkGreenHangingIvyLeft.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDarkGreenHangingIvyLeft" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDarkGreenHangingIvyLink">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDarkGreenHangingIvyLink.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDarkGreenHangingIvyLink" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDarkGreenHangingIvyMass">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDarkGreenHangingIvyMass.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDarkGreenHangingIvyMass" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+
+<block name="guppyDeadTree1">
+	<property name="Extends" value="treeMaster"/>
+  <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDeadTree1.prefab"/>
+	<property name="FallOver" value = "false" />
+	<property name="ModelOffset" value="0,0.5,0"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyDeadTree1Ivy">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDeadTree1Ivy.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDeadTree1Ivy" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyDeadTree1Ivy02">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDeadTree1Ivy02.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDeadTree1Ivy02" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+*<block name="guppyDelapidatedGateWithIvy01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDelapidatedGateWithIvy01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDelapidatedGateWithIvy01" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+*<block name="guppyDelapidatedGateWithIvy02">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDelapidatedGateWithIvy02.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDelapidatedGateWithIvy02" /> 
+      <property name="CanPickup" value="false" />  
+</block>
+*<block name="guppyDelapidatedPicketGate01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDelapidatedPicketGate01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDelapidatedPicketGate01" /> 
+      <property name="CanPickup" value="false" />  
+</block>
+*<block name="guppyDelapidatedPicketGate02">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyDelapidatedPicketGate02.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyDelapidatedPicketGate02" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyFlorette01IVY01">
+	<property name="Extends" value="treeMasterGrowing"/>
+  <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyFlorette01IVY01.prefab"/>
+	<property name="FallOver" value = "false" />
+	<property name="ModelOffset" value="0,-.5,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyIVYDropFrom300Chimney01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyIVYDropFrom300Chimney01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyIVYDropFrom300Chimney01" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyIVYDropFrom300Chimney02">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyIVYDropFrom300Chimney02.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyIVYDropFrom300Chimney02" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyIVYDropFrom300Wall01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyIVYDropFrom300Wall01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyIVYDropFrom300Wall01" /> 
+      <property name="CanPickup" value="false" />   
+</block>
+<block name="guppyIVYDropFrom300Wall02">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyIVYDropFrom300Wall02.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyIVYDropFrom300Wall02" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyIVYDropFrom300Wall03">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyIVYDropFrom300Wall03.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyIVYDropFrom300Wall03" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyPineTree01">
+	<property name="Extends" value="treeMasterGrowing"/>
+  <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyPineTree01.prefab"/>
+	<property name="FallOver" value = "false" />
+	<property name="ModelOffset" value="0,0.5,0"/>
+	<property name="MultiBlockDim" value="1,5,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeStumpWithIvy01">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyTreeStumpWithIvy01.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyTreeStumpWithIvy01" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyWallEdge2xCenter">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyWallEdge2xCenter.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyWallEdge2xCenter" /> 
+      <property name="CanPickup" value="false" /> 
+      <property name="ModelOffset" value="0.5,0.5,0"/>
+      <property name="MultiBlockDim" value="2,1,1"/>      
+</block>
+<block name="guppyWallEdge2xLeft">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyWallEdge2xLeft.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyWallEdge2xLeft" /> 
+      <property name="CanPickup" value="false" /> 
+      <property name="ModelOffset" value="0.5,0.5,0"/>
+      <property name="MultiBlockDim" value="2,1,1"/>  
+</block>
+<block name="guppyWallEdgeCenter">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyWallEdgeCenter.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyWallEdgeCenter" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+<block name="guppyWallEdgeCenterRight">
+      <property name="Material" value="Mwood"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyFoliageIvy.unity3d?guppyWallEdgeCenterRight.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property name="CustomIcon" value="guppyWallEdgeCenterRight" /> 
+      <property name="CanPickup" value="false" /> 
+</block>
+  </append>
+</configs>

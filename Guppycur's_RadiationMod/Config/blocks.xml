@@ -1,0 +1,44 @@
+<configs>
+<append xpath="/blocks">
+
+<block name="guppyRadBlock1">
+	<property name="Material" value="Mwood_weak"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/ember_pile_1" param1="main_mesh"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ParticleName" value="ember_pile"/>
+	<property name="ParticleOffset" value="0,0,0"/>
+	<property name="BuffsWhenWalkedOn" value="buffRadiation1"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="VehicleHitScale" value="999"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="coalHarvest"/>
+	<drop event="Destroy" name="resourceWood" count="1"/>
+	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+</block>
+
+<block name="guppyRadBlock2">
+	<property name="Material" value="Mwood_weak"/>
+	<property name="Tags" value="coalBurnedDmg"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="Ext3dModel"/> <property name="Texture" value="293"/>
+	<property name="Mesh" value="models"/>
+	<property name="Model" value="OutdoorDecor/ember_pile_1" param1="main_mesh"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ParticleName" value="ember_pile"/>
+	<property name="ParticleOffset" value="0,0,0"/>
+	<property name="BuffsWhenWalkedOn" value="buffRadiation2"/>
+	<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	<property name="VehicleHitScale" value="999"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="2,4" tag="coalHarvest"/>
+	<drop event="Destroy" name="resourceWood" count="1"/>
+	<property name="FilterTags" value="fdecor,fother,foutdoor"/>
+</block>
+
+</append>
+
+</configs>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<prefabs>
+  <decoration type="model" name="utility_celltower_02" position="-6,140,-36" rotation="0" />
+  <decoration type="model" name="abandoned_house_01" position="26,118,-114" rotation="0" />
+  <decoration type="model" name="abandoned_house_02" position="-45,118,-107" rotation="0" />
+  <decoration type="model" name="abandoned_house_03" position="-73,118,-81" rotation="1" />
+  <decoration type="model" name="abandoned_house_04" position="-90,118,-10" rotation="1" />
+  <decoration type="model" name="abandoned_house_05" position="-63,114,32" rotation="0" />
+  <decoration type="model" name="abandoned_house_06" position="-1,118,43" rotation="0" />
+  <decoration type="model" name="abandoned_house_07" position="46,118,26" rotation="0" />
+  <decoration type="model" name="abandoned_house_08" position="55,118,-76" rotation="0" />
+  <decoration type="model" name="cabin_01" position="53,97,-230" rotation="0" />
+  <decoration type="model" name="cabin_02" position="95,94,-199" rotation="0" />
+  <decoration type="model" name="cabin_03" position="148,97,-156" rotation="0" />
+  <decoration type="model" name="cabin_04" position="196,97,-106" rotation="0" />
+  <decoration type="model" name="cabin_05" position="180,94,21" rotation="0" />
+  <decoration type="model" name="cabin_06" position="140,92,77" rotation="0" />
+  <decoration type="model" name="cabin_07" position="68,97,89" rotation="3" />
+  <decoration type="model" name="cabin_08" position="29,97,158" rotation="0" />
+  <decoration type="model" name="cabin_09" position="-78,97,136" rotation="0" />
+  <decoration type="model" name="cabin_10" position="-140,92,80" rotation="3" />
+  <decoration type="model" name="cabin_11" position="-175,86,15" rotation="3" />
+  <decoration type="model" name="cabin_12" position="-182,95,-94" rotation="1" />
+  <decoration type="model" name="cabin_13" position="-149,92,-191" rotation="2" />
+  <decoration type="model" name="cabin_14" position="-77,95,-222" rotation="0" />
+  <decoration type="model" name="church_01" position="56,56,-401" rotation="0" />
+  <decoration type="model" name="city_center_01" position="356,78,55" rotation="3" />
+  <decoration type="model" name="commercial_strip_02" position="-76,77,338" rotation="2" />
+  <decoration type="model" name="downtown_building_01" position="-424,77,-115" rotation="1" />
+</prefabs>

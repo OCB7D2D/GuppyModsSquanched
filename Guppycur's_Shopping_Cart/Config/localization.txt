@@ -1,0 +1,6 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+vehicleGuppyShoppingCart,vehicles,item,,Shopping Go-Kart Vehicle,,,,,
+vehicleGuppyPushShoppingCart,vehicles,item,,Pushable Shopping Cart,,,,,
+vehicleGuppyShoppingCartPlaceable,vehicles,item,,Shopping Go-Kart Vehicle,,,,,
+vehicleGuppyPushShoppingCartPlaceable,vehicles,item,,Pushable Shopping Cart,,,,,
+cntShoppingCartEmpty,blocks,Container,,Rusted Shopping Cart,,,,,

@@ -1,0 +1,222 @@
+﻿<configs>
+
+	<remove xpath="/blocks/block[@name='portalMaster']/property[@class='RepairItems']"/>
+	<remove xpath="/blocks/block[@name='portalMaster']/drop[@event='Harvest']"/>
+	<remove xpath="/blocks/block[@name='portalMaster']/drop[@event='Destroy']"/>
+	
+	<append xpath="/blocks/block[@name='portalMaster']">
+		<property class="RepairItems">
+			<property name="resourceForgedSteel" value="12"/>
+		</property>
+		<drop event="Harvest" name="resourceForgedSteel" count="15,28" tag="allHarvest"/>
+		<drop event="Destroy" count="0"/>
+	</append>
+	
+	<append xpath="/blocks">
+		<block name="guppyMagicPortal01">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupMagicPortal1.unity3d?guppyMagicPortal1.prefab"/>
+			<property name="CustomIcon" value="guppyMagicPortal01" /> 
+			<property name="Location" value="" />
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+			
+		</block>
+		<block name="guppyMagicPortal02">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupMagicPortal2.unity3d?guppyMagicPortal2.prefab"/>
+		    <property name="CustomIcon" value="guppyMagicPortal02" /> 
+			<property name="Location" value="" /> 	
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+						
+		</block>	
+		<block name="guppyFuturePortal2">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupFuturePortal2.unity3d?guppyFuturePortal2.prefab"/>
+			<property name="CustomIcon" value="guppyFuturePortal2" /> 
+			<property name="Location" value="gupDestination01" /> 
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+						
+		</block>
+		<block name="guppyFuturePortal3">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupFuturePortal3.unity3d?guppyFuturePortal3.prefab"/>
+			<property name="CustomIcon" value="guppyFuturePortal3" /> 
+			<property name="Location" value="" /> 
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+			
+		</block>	
+		<block name="guppyFuturePortal4">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupFuturePortal4.unity3d?guppyFuturePortal4.prefab"/>
+			<property name="CustomIcon" value="guppyFuturePortal4" /> 		
+			<property name="Location" value="" /> 
+			<Property name="RequiredPower" value="0" />
+			
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+						
+		</block>		
+		<block name="guppyFuturePortal5">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupFuturePortal5.unity3d?guppyFuturePortal5.prefab"/>
+			<property name="CustomIcon" value="guppyFuturePortal5" /> 	
+			<property name="Location" value="" /> 
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->			
+						
+		</block>
+		<block name="guppyFuturePortal6">
+			<property name="Extends" value="portalMaster"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="3,3,3"/>
+			<property name="Model" value="#@modfolder:Resources/gupFuturePortal6.unity3d?guppyFuturePortal6.prefab"/>
+			<property name="CustomIcon" value="guppyFuturePortal6" /> 	
+			<property name="Location" value="" /> 
+			<property name="RequiredPower" value="0" />
+
+			<!-- Uncomment to make Powered 
+			<property name="Class" value="PoweredPortal, SCore" /> 	
+			<property name="RequiredPower" value="300" />  -->
+
+			<!-- Uncomment to force Source/Destination
+			<property name="Location" value="source=thisPortalMagic1,destination=thisPortalMagic2" /> -->
+			
+			<!-- Uncomment to make this a Destination Portal for another portal
+			<property name="Location" value="source=samplePortal03,destination=NA" /> -->
+			
+			<!-- Uncomment to say I am samplePortal01, I go to samplePortal02, which is inside a prefab called farm_02
+			<property name="Location" value="source=samplePortal01,destination=samplePortal02,prefab=farm_02" /> -->	
+
+			<!-- Uncomment to hide the portal name
+			<property name="Display" value="false" /> -->
+
+			<!-- Uncomment to require a specified buff to see the portal name. -->
+			<!--property name="DisplayBuff" value="buffyours" /-->				
+						
+		</block>	
+
+	</append>
+
+</configs>

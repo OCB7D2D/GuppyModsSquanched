@@ -1,0 +1,13 @@
+<configs>
+
+  <append xpath="/recipes">
+  
+    <recipe name="modGuppyRadProtect" count="1" craft_area="workbench" tags="learnable,perkAdvancedEngineering">
+        <ingredient name="resourceScrapLead" count="180"/>
+        <ingredient name="resourceForgedIron" count="10"/>
+        <ingredient name="resourceElectricParts" count="11"/>
+    </recipe>
+    
+  </append>
+
+</configs>

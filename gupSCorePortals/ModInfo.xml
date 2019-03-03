@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppys SCore Portals mod" />
+		<Description value="Adds portal blocks for SCore, Art by Mumpfy, Objects/Sounds/XML by Guppy" />
+		<Author value="GuppyCur, Sphereii, Mumpfy" />
+		<Version value="1.0" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>

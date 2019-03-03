@@ -1,0 +1,75 @@
+<configs>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>	
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>	
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroup']/entity[@name='zombieBoe']" >
+
+		<entity name="guppyZombie01Beige"/>
+		<entity name="guppyZombie02White"/>
+		<entity name="guppyZombie03Dark"/>
+		<entity name="guppyZombieHungry01Blue"/>
+		<entity name="guppyZombieHungry02Red"/>
+		<entity name="guppyZombieHungry03White"/>
+		<entity name="guppyZombieCarmela"/>
+
+	</insertAfter>		
+
+</configs>	

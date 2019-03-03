@@ -1,0 +1,26 @@
+<configs>
+  <append xpath="/buffs">
+      <buff name="GuppyFlashBang" hidden="true"><damage_type value="stun"/><stack_type value="replace"/><duration value="5"/>
+          <effect_group>
+              <requirement name="EntityTagCompare" tags="player"/>
+              <requirement name="IsFPV"/>
+              <triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="Revive" value="true"/>
+              <triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/GuppysGrenades.unity3d?guppyParticleFlashBang" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyParticleFlashBang" />    
+              <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="2" effect_name="Blur"/>
+              <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Blur"/>
+              <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" intensity="1" fade="3" effect_name="Dark"/>
+              <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Dark"/>
+          </effect_group>
+          <effect_group>
+              <requirement name="NotHasBuff" buff="buffInjuryStunned01"/>
+              <passive_effect name="RunSpeed" operation="perc_subtract" value="1.1"/>
+              <passive_effect name="WalkSpeed" operation="perc_subtract" value="1.1"/>
+              <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buff_stunned" play_in_head="true"/>
+              <triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="buff_stunned" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="buff_stunned" play_in_head="true"/>
+              <triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buff_stunned" play_in_head="true"/>
+          </effect_group>
+      </buff>
+  </append>
+</configs>

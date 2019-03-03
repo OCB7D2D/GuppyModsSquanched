@@ -1,0 +1,11 @@
+<configs>
+
+  <insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnBatonT0PipeBaton']" >
+		<item name="gupMaskBlank" />
+  </insertAfter>
+  
+  <insertAfter xpath="/lootcontainers/lootgroup[@name='dyes']/item[@name='modDyeYellow']" >
+		<item name="modDyeWhite" />
+  </insertAfter>
+
+</configs>

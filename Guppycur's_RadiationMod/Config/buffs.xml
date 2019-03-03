@@ -1,0 +1,123 @@
+	<configs>
+
+  
+    <insertBefore xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group/triggered_effect[@buff='buffRadiation03']" >
+    
+        <triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="RadProtection" operation="set" value="0"/>
+<!--        
+        <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation1">
+              <requirement name="NotHasBuff" buff="god" />  
+          <requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="0.5"/>
+        </triggered_effect>
+        
+        <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffRadiation2">
+          <requirement name="NotHasBuff" buff="god" />
+          <requirement name="CVarCompare" cvar="_biomeradiation" operation="GT" value="1.5"/>
+        </triggered_effect>
+-->    
+    </insertBefore>
+
+  
+    <append xpath="/buffs">
+    
+<buff name="buffRadiationProtectEquip" name_key="buffRadiation3Name" description_key="buffRadiation3Desc" tooltip_key="Rad 1 test" icon="ui_game_symbol_radiation" icon_color="255,255,255" icon_blink="true">
+    <stack_type value="replace"/>
+    <duration value="0"/>
+
+    <effect_group>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="RadProtection" operation="add" value="1"/>
+      <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="RadProtection" operation="add" value="1"/>
+      <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RadProtection" operation="set" value="0"/>
+    </effect_group>
+</buff>   
+
+<buff name="buffRadiationProtectRemove" name_key="buffRadiation3Name" description_key="buffRadiation3Desc" tooltip_key="Rad 1 test" icon="ui_game_symbol_radiation" icon_color="255,255,255" icon_blink="true">
+    <stack_type value="replace"/>
+    <duration value="0"/>
+
+    <effect_group>
+      <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="RadProtection" operation="add" value="-1"/>
+      <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="RadProtection" operation="add" value="-1"/>
+      <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="RadProtection" operation="set" value="0"/>
+    </effect_group>
+</buff> 
+
+    <buff name="buffRadiation1" name_key="buffRadiation3Name" description_key="buffRadiation3Desc" tooltip_key="Rad 1 test" icon="ui_game_symbol_radiation" icon_color="0,255,0" icon_blink="true">
+      <damage_type value="radiation"/>
+      <stack_type value="ignore"/>
+      <duration value="10"/>
+      <update_rate value="1"/>
+      <effect_group>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,10" value="1,1"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="10,50" value="1,30"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="50,1000" value="40,1000"/>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+        </triggered_effect>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0" />
+        
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".1" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffRadiation1">
+          <requirement name="CVarCompare" cvar="_biomeradiation" operation="LT" value="2.5"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".4" fade="2"/>
+        <triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+        
+        <triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="Rad1Start"/>
+        
+        <requirement name="CVarCompare" cvar="RadProtection" operation="LTE" value="1"/>
+      </effect_group>
+    </buff>
+
+    <buff name="buffRadiation2" name_key="buffRadiation3Name" description_key="buffRadiation3Desc" tooltip_key="Rad 2 Test" icon="ui_game_symbol_radiation" icon_color="0,0,255" icon_blink="true">
+      <damage_type value="radiation"/>
+      <stack_type value="ignore"/>
+      <duration value="10"/>
+      <update_rate value="1"/>
+      <effect_group>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,10" value="1,1"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="10,50" value="1,30"/>
+        <passive_effect name="HealthChangeOT" operation="base_subtract" duration="50,1000" value="40,1000"/>
+
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="add" value="1"/>
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="2"/>
+        </triggered_effect>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="RadiationSignal" operation="set" value="0" />
+        
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity=".1" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="1"/>
+        </triggered_effect>
+        <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" intensity="0" fade=".7" effect_name="Hot">
+          <requirement name="CVarCompare" cvar="RadiationSignal" operation="Equals" value="0"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Hot"/>
+        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" target="self" buff="buffRadiation2">
+          <requirement name="CVarCompare" cvar="_biomeradiation" operation="LT" value="2.5"/>
+        </triggered_effect>
+
+        <triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".4" fade="2"/>
+        <triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+        <triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="2"/>
+        
+        <triggered_effect trigger="onSelfBuffStart" action="LogMessage" message="Rad2Start"/>
+        
+        <requirement name="CVarCompare" cvar="RadProtection" operation="LTE" value="4"/>
+      </effect_group>
+    </buff>
+    
+    </append>
+  
+  </configs>

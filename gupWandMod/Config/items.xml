@@ -1,0 +1,410 @@
+<configs>
+
+<append xpath="/items">
+
+		<item name="guppyMagicWandFrostLauncher">
+			<property name="Tags" value="guppyWands"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#@modfolder:Resources/guppyFrostWand.unity3d?gupFrostWand.Prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="Weight" value="10"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value=""/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="guppyMagicWandFrostLauncher"/>			
+			<property class="Action0">
+				<property name="Class" value="Launcher"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".7"/> 
+				<property name="Magazine_items" value="ammoFrostLauncher"/>
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Reload_time" value="1"/>
+				<property name="Sound_start" value=""/>
+				<property name="Particles_muzzle_fire" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group name="guppyFrostWand" tiered="false">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="0" tags="guppyWands"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="guppyWands"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="0" tags="guppyWands"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40" tags="guppyWands"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="guppyWands"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="25"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6" tags="guppyWands"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5,22" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="WeaponFire" value="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+			</effect_group>
+		</item>
+		
+		<item name="ammoFrostLauncher">
+			<property name="Meshfile" value="#@modfolder:Resources/guppyFrostWand.unity3d?gupFrostAmmo.Prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+			<property name="Group" value="Resources,Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				  <property name="Gravity" value="0"/>
+				  <property name="FlyTime" value="20"/>
+				  <property name="LifeTime" value="20"/>
+				<property name="Explosion.ParticleIndex" value="0"/> 
+				<property name="Explosion.RadiusBlocks" value="5"/> 
+				<property name="Explosion.RadiusEntities" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>	
+				<property name="Explosion.BlockDamage" value="-1"/>
+			</property>
+			<effect_group name="resourceNail" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="70"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="1"/>
+				<!--<triggered_effect trigger="onProjectileImpact" action="RemoveFire, SCore" target="positionAOE" range="5"/>	-->
+				<triggered_effect trigger="onSelfDamagedBlock" action="RemoveFire, SCore" target="positionAOE" range="5"/>	
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RemoveFire, SCore" target="positionAOE" range="5"/>
+			</effect_group>
+		</item>		
+	
+		<item name="guppyMagicWandFireLauncher">
+			<property name="Tags" value="guppyWands"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#@modfolder:Resources/guppyFireWand.unity3d?gupFireWand.Prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="Weight" value="10"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value=""/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="guppyMagicWandFireLauncher"/>			
+			<property class="Action0">
+				<property name="Class" value="Launcher"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".7"/> 
+				<property name="Magazine_items" value="ammoFireLauncher"/>
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Reload_time" value="1"/>
+				<property name="Sound_start" value=""/>
+				<property name="Particles_muzzle_fire" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group name="guppyFrostWand" tiered="false">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="0" tags="guppyWands"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="15" tags="guppyWands"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="guppyWands"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="0" tags="guppyWands"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40" tags="guppyWands"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="guppyWands"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="25"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6" tags="guppyWands"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5,22" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="WeaponFire" value="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+			</effect_group>
+		</item>
+		
+		<item name="ammoFireLauncher">
+			<property name="Meshfile" value="#@modfolder:Resources/guppyFireWand.unity3d?gupFireAmmo.Prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+			<property name="Group" value="Resources,Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				  <property name="Gravity" value="0"/>
+				  <property name="FlyTime" value="20"/>
+				  <property name="LifeTime" value="20"/>
+				<property name="Explosion.ParticleIndex" value="0"/> 
+				<property name="Explosion.RadiusBlocks" value="5"/> 
+				<property name="Explosion.RadiusEntities" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>	
+				<property name="Explosion.BlockDamage" value="1"/>
+			</property>
+			<effect_group name="resourceNail" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="70"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="1"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddFireDamage, SCore" />	
+				<triggered_effect trigger="onSelfDamagedBlock" action="AddFireDamage, SCore" />
+			</effect_group>
+		</item>		
+	
+		<item name="guppyMagicWandLightningLauncher">
+			<property name="Tags" value="guppyWands"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#@modfolder:Resources/guppyLightningWand.unity3d?gupLightningWand.Prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="Weight" value="10"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value=""/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="guppyMagicWandLightningLauncher"/>				
+			<property class="Action0">
+				<property name="Class" value="Launcher"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".7"/> 
+				<property name="Magazine_items" value="ammoLightningLauncher"/>
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Reload_time" value="1"/>
+				<property name="Sound_start" value=""/>
+				<property name="Particles_muzzle_fire" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group name="guppyFrostWand" tiered="false">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="0" tags="guppyWands"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="guppyWands"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="0" tags="guppyWands"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40" tags="guppyWands"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="guppyWands"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="25"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6" tags="guppyWands"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5,22" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="WeaponFire" value="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+			</effect_group>
+		</item>
+		
+		<item name="ammoLightningLauncher">
+			<property name="Meshfile" value="#@modfolder:Resources/guppyLightningWand.unity3d?gupLightningAmmo.Prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+			<property name="Group" value="Resources,Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				  <property name="Gravity" value="0"/>
+				  <property name="FlyTime" value="20"/>
+				  <property name="LifeTime" value="20"/>
+				<property name="Explosion.ParticleIndex" value="0"/> 
+				<property name="Explosion.RadiusBlocks" value="5"/> 
+				<property name="Explosion.RadiusEntities" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>	
+				<property name="Explosion.BlockDamage" value="1"/>
+			</property>
+			<effect_group name="resourceNail" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="70"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="1"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddFireDamage, SCore" />	
+				<triggered_effect trigger="onSelfDamagedBlock" action="AddFireDamage, SCore" />
+			</effect_group>
+		</item>		
+		
+		<item name="guppyMagicWandVampiricLauncher">
+			<property name="Tags" value="guppyWands"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#@modfolder:Resources/guppyVampiricWand.unity3d?gupVampiricWand.Prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="Weight" value="10"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value=""/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="CustomIcon" value="guppyMagicWandVampiricLauncher"/>				
+			<property class="Action0">
+				<property name="Class" value="Launcher"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".7"/> 
+				<property name="Magazine_items" value="ammoVampiricLauncher"/>
+				<property name="Instantiate_on_load" value="false"/>
+				<property name="Reload_time" value="1"/>
+				<property name="Sound_start" value=""/>
+				<property name="Particles_muzzle_fire" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="AutoReload" value="false"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group name="guppyFrostWand" tiered="false">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value="0" tags="guppyWands"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15" tags="guppyWands"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="guppyWands"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="0" tags="guppyWands"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40" tags="guppyWands"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="guppyWands"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="25"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6" tags="guppyWands"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6" tags="guppyWands"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="5,22" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="WeaponFire" value="true"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+			</effect_group>
+		</item>
+		
+		<item name="ammoVampiricLauncher">
+			<property name="Meshfile" value="#@modfolder:Resources/guppyVampiricWand.unity3d?gupVampiricAmmo.Prefab"/>
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceScrapIron"/>
+			<property name="Stacknumber" value="1000"/>
+			<property name="EconomicValue" value="10"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+			<property name="Group" value="Resources,Ammo/Weapons"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				  <property name="Gravity" value="0"/>
+				  <property name="FlyTime" value="20"/>
+				  <property name="LifeTime" value="20"/>
+				<property name="Explosion.ParticleIndex" value="0"/> 
+				<property name="Explosion.RadiusBlocks" value="5"/> 
+				<property name="Explosion.RadiusEntities" value="0"/>
+				<property name="Explosion.DamageBonus.water" value="0"/>	
+				<property name="Explosion.BlockDamage" value="1"/>
+			</property>
+			<effect_group name="resourceNail" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="70"/>
+				<passive_effect name="ProjectileStickChance" operation="perc_set" value="1"/>
+				<triggered_effect trigger="onProjectileImpact" action="AddFireDamage, SCore" />	
+				<triggered_effect trigger="onSelfDamagedBlock" action="AddFireDamage, SCore" />
+			</effect_group>
+		</item>		
+		
+		<item name="guppyMagicWandLight">
+			<property name="Tags" value="guppyWands"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="1"/>
+			<property name="Meshfile" value="#@modfolder:Resources/guppyLightWand.unity3d?gupLightWand.Prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="Weight" value="10"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value=""/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="CustomIcon" value="guppyMagicWandLight"/>				
+			<property name="Group" value="Tools/Traps"/>
+			<property class="Action0">
+				<property name="Class" value="Activate"/>
+				<property name="Sphere" value=".15"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+			</property>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="100"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AnimatorSetBool" target="self" property="WeaponFire" value="true"/>	
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AnimatorSetBool" target="self" property="WeaponFire" value="false"/>		
+			</effect_group>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="guppyHeadLight" prefab="#@modfolder:Resources/guppyLightObject.unity3d?gupLightObject.Prefab" parentTransform="Spotlight" localPos="0,0,0" localRot="90,0,0"/>
+				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="gupypyHeadLightCam" prefab="#@modfolder:Resources/guppyLightObject.unity3d?gupLightObject.Prefab" parentTransform="CameraNode" localPos="0,0,0" localRot="-90,0,0"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="guppyHeadLight"/>
+				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="gupypyHeadLightCam"/>
+				<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="guppyHeadLight" active="@!.IsFPV"/>
+				<triggered_effect trigger="onSelfItemActivate" action="SetPartActive" part="gupypyHeadLightCam" active="@.IsFPV"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="guppyHeadLight" active="false"/>
+				<triggered_effect trigger="onSelfItemDeactivate" action="SetPartActive" part="gupypyHeadLightCam" active="false"/>
+			</effect_group>			
+		</item>		
+
+</append>
+</configs>

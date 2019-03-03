@@ -1,0 +1,512 @@
+<configs>
+	<append xpath="/items">
+
+		<item name="gupMaskBlank">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBlank.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBlank.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBlankHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="CustomIcon" value="gupMaskBlank"/>
+			<property name="DescriptionKey" value="guppyMaskBlankDesc"/>
+		</item>	
+		
+		<item name="gupMaskAmericanItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>			
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskAmerican.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskAmerican.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskAmericanHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskAmericanItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskAmericanItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+			
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipAmerican">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipAmerican"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskAmerican"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+		
+		<item name="gupMaskBritishItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBritish.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBritish.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBritishHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskBritishItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskBritishItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipBritish">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipBritish"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskBritish"/>	
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>			
+		</item>	
+
+		<item name="gupMaskBurnedItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBurned.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBurned.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBurnedHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskBurnedItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskBurnedItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipBurned">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipBurned"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>		
+			<property name="CustomIcon" value="gupMaskBurned"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskClownItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskClown.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskClown.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskClownHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskClownItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskClownItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipClown">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipClown"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>		
+			<property name="CustomIcon" value="gupMaskClown"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskGhostItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskGhost.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskGhost.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskGhostHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskGhostItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskGhostItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipGhost">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipGhost"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskGhost"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskLeatherItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeather.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeather.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeatherHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskLeatherItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskLeatherItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipLeather">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipLeather"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskLeather"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskLeatherClownItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeatherClown.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeatherClown.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeatherClownHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskLeatherClownItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskLeatherClownItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipLeatherClown">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipLeatherClown"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskLeatherClown"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskRussianItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskRussian.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskRussian.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskRussianHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskRussianItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskRussianItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipRussian">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipRussian"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskRussian"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+
+		<item name="gupMaskSatanicItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSatanic.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSatanic.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSatanicHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSatanicItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSatanicItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipSatanic">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipSatanic"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>		
+			<property name="CustomIcon" value="gupMaskSatanic"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>			
+		</item>	
+		
+		<item name="gupMaskSkeletonItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSkeleton.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSkeleton.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSkeletonHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSkeletonItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSkeletonItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipSkeleton">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipSkeleton"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskSkeleton"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>			
+		</item>		
+		
+		<item name="gupMaskPigItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskPig.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskPig.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskPigHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskPigItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskPigItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipPig">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipPig"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskPig"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+		<item name="gupMaskDeerItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskDeer.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskDeer.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskDeerHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>	
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskDeerItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskDeerItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipDeer">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipDeer"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskDeer"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+		<item name="gupMaskSnowmanItem">
+			<property name="HoldType" value="31"/>
+			<property name="DisplayType" value="clothing"/>
+			<property name="Meshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSnowman.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSnowman.prefab"/>
+			<property name="HandMeshfile" value="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSnowmanHand.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="600"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSnowmanItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="close_garbage"/>
+				<property name="Create_item" value="gupMaskSnowmanItem"/>
+				<property name="Create_item_count" value="1"/>	
+			</property>		
+
+			<effect_group tiered="false" name="Add Mask">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMaskEquipSnowman">
+					<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="buffMaskEquipSnowman"/>	
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>
+			</effect_group>	
+			<property name="CustomIcon" value="gupMaskSnowman"/>
+			<property name="DescriptionKey" value="guppyMaskGroupDesc"/>
+		</item>	
+	
+	</append>
+</configs>
+

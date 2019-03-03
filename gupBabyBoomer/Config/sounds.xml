@@ -1,0 +1,112 @@
+<configs>
+
+<append xpath="/Sounds">
+
+ <SoundDataNode name="guppyBoomeralert"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?guppyBabyBoomer"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?toddler-amused-01"/>
+	<Channel name="Mouth"/>
+	<Priority name="4"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomerattack"> <AudioSource name="Sounds/AudioSource_CreaturesLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-02"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-03"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-04"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-05"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-06"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-laughing-07"/>
+	<Channel name="Mouth"/>
+	<Priority name="2"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomerdeath"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-02"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-03"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-04"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-05"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-06"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-07"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-08"/>
+	<Channel name="Mouth"/>
+	<Priority name="1"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomerexplodewarning"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-whining-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-whining-02"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-whining-03"/>
+	<Priority name="3"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomerpain"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-02"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-03"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-04"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-05"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-06"/>
+	<Channel name="Mouth"/>
+	<Priority name="2"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomerroam"> <AudioSource name="Sounds/AudioSource_CreaturesLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-07"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-crying-08"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-01"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-02"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-03"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-04"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-05"/>
+	<Channel name="Mouth"/>
+	<Priority name="6"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomersense"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-06"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-07"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-08"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-09"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?baby-cooing-10"/>
+	<Channel name="Mouth"/>
+	<Priority name="5"/>
+	<maxVoicesPerEntity value="1"/>
+	<LowestPitch name="0.95"/>
+	<HighestPitch name="1.05"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="1"/> 
+</SoundDataNode>
+
+<SoundDataNode name="guppyBoomer_beep"> <AudioSource name="Sounds/AudioSource_PainLG"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/gupBabyBoomerSounds.unity3d?guppyBoomer_beep"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+	
+</append>
+</configs>	

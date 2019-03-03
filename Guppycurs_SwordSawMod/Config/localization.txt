@@ -1,0 +1,2 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+guppy_SwordSaw,items,mod,New,Guppycur's Sword Saw,,,,,

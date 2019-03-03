@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppycur's Stairway to Hell" />
+		<Description value="Randomizes stairs to break when stepping on them" />
+		<Author value="guppycur" />
+		<Version value="1.0" />
+		
+	</ModInfo>
+</xml>

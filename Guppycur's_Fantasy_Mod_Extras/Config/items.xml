@@ -1,0 +1,426 @@
+<configs>
+	<append xpath="/items">
+  
+      <item name="guppyWickedSword"> <!-- T3 Blades -->
+      <property name="Tags" value="machete,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
+      <property name="DisplayType" value="meleeKnife"/>
+      <property name="HoldType" value="47"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyWickedSword.prefab"/>
+      <property name="DropMeshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyWickedSword.prefab"/>
+      <property name="Material" value="MmeleeWpnBladeParts"/> <property name="Weight" value="6"/>
+      <property name="RepairTools" value="resourceRepairKit"/>
+      <property name="DegradationBreaksAfter" value="false"/>
+      <property name="EconomicValue" value="700"/>
+      <property name="SoundJammed" value="ItemNeedsRepair"/>
+      <property name="SoundDestroy" value="wooddestroy1"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property name="RepairExpMultiplier" value="5.5"/>
+      <property name="UnlockedBy" value="meleeToolKnifeMacheteSchematic"/>
+      <property name="ShowQuality" value="true"/>
+
+      <property class="Action0">
+        <property name="Class" value="DynamicMelee"/>
+        <property name="Damage_type" value="Slashing"/>
+        <property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+        <property name="Sound_start" value="machete_swinglight"/>
+        <property name="ToolCategory.Butcher" value="0" param1="4.7"/>
+        <property name="Sound_harvesting" value="open_animal" param1="organic"/>
+        <property name="UseGrazingHits" value="true"/>
+        <property name="GrazeStart" value=".28"/>
+        <property name="GrazeEnd" value=".4"/>
+        <property name="SwingDegrees" value="80"/>
+        <property name="SwingAngle" value="130"/>
+        <property class="HitSounds">
+          <property name="Override0" value="organic" param1="metalslashorganic"/>
+        </property>
+        <property class="GrazeSounds">
+          <property name="Override0" value="organic" param1="metalgrazeorganic"/>
+        </property>
+      </property>
+      <property class="Action1">
+        <property name="Class" value="DynamicMelee"/>
+        <property name="Damage_type" value="Slashing"/>
+        <property name="Sphere" value=".15"/>
+        <property name="Sound_start" value="machete_swingheavy"/>
+        <property name="ToolCategory.Butcher" value="0" param1="4.7"/>
+        <property name="Sound_harvesting" value="open_animal" param1="organic"/>
+        <property name="UsePowerAttackAnimation" value="true"/>
+
+        <property name="UseGrazingHits" value="true"/>
+        <property name="IsHorizontalSwing" value="true"/>
+        <property name="GrazeStart" value=".3"/>
+        <property name="GrazeEnd" value=".4"/>
+        <property name="SwingDegrees" value="-80"/>
+        <property name="SwingAngle" value="-60"/>
+        <property class="HitSounds">
+          <property name="Override0" value="organic" param1="metalslashorganic"/>
+        </property>
+        <property class="GrazeSounds">
+          <property name="Override0" value="organic" param1="metalgrazeorganic"/>
+        </property>
+      </property>
+      <effect_group name="guppyWickedSword">
+        <passive_effect name="EntityDamage" operation="base_set" value="39.8"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="21"/>
+        <passive_effect name="AttacksPerMinute" operation="base_set" value="65"/>
+        <passive_effect name="StaminaLoss" operation="base_set" value="8.6" tags="primary"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="288,673" tier="1,6" tags="perkDeepCuts"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDeepCuts"/>
+        <passive_effect name="MaxRange" operation="base_set" value="2.3"/>
+        <passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random EntityDmg -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+        <passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+        <passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+        <passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+        <passive_effect name="HarvestCount" operation="base_set" value="1" tags="butcherHarvest"/>
+        <display_value name="dBleeding" value="1"/> <!-- the bleeding proc is run by the perk -->
+      </effect_group>
+      <effect_group name="Power Attack">
+        <passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+        <passive_effect name="StaminaLoss" operation="base_add" value="18.8" tags="secondary"/>
+      </effect_group>
+    </item>
+    
+    <item name="guppyHammerOfGuppy"> <!-- T3 sledgehammers -->
+      <property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic"/>
+      <property name="DisplayType" value="melee"/>
+      <property name="HoldType" value="33"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyHammerOfGuppy.prefab"/>
+      <property name="DropMeshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyHammerOfGuppy.prefab"/>  
+      <property name="Material" value="MmeleeWpnSledgeParts"/> <property name="Weight" value="12"/>
+      <property name="RepairTools" value="resourceRepairKit"/>
+      <property name="DegradationBreaksAfter" value="false"/>
+      <property name="SoundJammed" value="ItemNeedsRepair"/>
+      <property name="SoundDestroy" value="metaldestroy1"/>
+      <property name="FuelValue" value="250"/>
+      <property name="EconomicValue" value="700"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property name="UnlockedBy" value="meleeToolSledgehammerSteelSchematic"/>
+      <property name="ShowQuality" value="true"/>
+
+      <property class="Action0">
+        <property name="Class" value="DynamicMelee"/>
+        <property name="Sphere" value=".15"/>
+        <property name="Sound_start" value="sledge_swinglight"/>
+        <property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+
+        <property name="UseGrazingHits" value="true"/>
+        <property name="GrazeStart" value=".515"/>
+        <property name="GrazeEnd" value=".52"/>
+        <property name="SwingDegrees" value="65"/>
+        <property name="SwingAngle" value="160"/>
+        <property class="HitSounds">
+          <property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+        </property>
+        <property class="GrazeSounds">
+          <property name="Override0" value="organic" param1="metalgrazeorganic"/>
+        </property>
+      </property>
+      <property class="Action1">
+        <property name="Class" value="DynamicMelee"/>
+        <property name="Sphere" value=".15"/>
+        <property name="Sound_start" value="sledge_swingheavy"/>
+        <property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+        <property name="UsePowerAttackAnimation" value="true"/>
+
+        <property name="UseGrazingHits" value="true"/>
+        <property name="GrazeStart" value=".515"/>
+        <property name="GrazeEnd" value=".52"/>
+        <property name="SwingDegrees" value="110"/>
+        <property name="SwingAngle" value="90"/>
+        <property class="HitSounds">
+          <property name="Override0" value="organic" param1="metalsolidhitorganic"/>
+        </property>
+        <property class="GrazeSounds">
+          <property name="Override0" value="organic" param1="metalgrazeorganic"/>
+        </property>
+      </property>
+      <effect_group name="guppyHammerOfGuppy">
+        <passive_effect name="EntityDamage" operation="base_set" value="86.2"/> <!-- meleeToolSledgehammerSteel -->
+        <passive_effect name="BlockDamage" operation="base_set" value="185"/>
+        <passive_effect name="AttacksPerMinute" operation="base_set" value="26"/>
+        <passive_effect name="StaminaLoss" operation="base_set" value="17.6" tags="primary"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="207,581" tier="1,6" tags="perkSkullCrusher"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkSkullCrusher"/>
+        <passive_effect name="MaxRange" operation="base_set" value="2.8"/>
+        <passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+        <passive_effect name="DismemberChance" operation="base_add" value=".2" tags="primary"/>
+
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random EntityDmg -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+        <passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+        <passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+        <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+        <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+        <passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+      </effect_group>
+      <effect_group name="Power Attack">
+        <passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+        <passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+        <passive_effect name="StaminaLoss" operation="base_add" value="55.2" tags="secondary"/>
+        <passive_effect name="DismemberChance" operation="base_add" value=".3" tags="secondary"/>
+        <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="buffguppyHammerHit" target="other"/>     
+      </effect_group>
+    </item>    
+    
+    <item name="guppybulletLightning">
+      <property name="Extends" value="ammoArrowStone"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletLightning.prefab"/>
+      <property name="StickyMeshFile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletLightningDrop.prefab"/>      
+      <property name="HoldType" value="45"/>
+      <property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/> 
+      <property name="StickyOffset" value="0"/>  
+      <property name="IsSticky" value="false"/>      
+      <property name="Material" value="Mmetal"/>
+      <property name="EconomicValue" value="25"/>
+      <property name="EconomicBundleSize" value="5"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property class="Action1">
+        <property name="Gravity" value="-3.5"/>
+      </property>
+
+      <effect_group name="guppybulletLightning" tiered="false"> <!-- ammoArrowIron -->
+        <passive_effect name="EntityDamage" operation="base_set" value="28"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="3"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+        <passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+        <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked">  		</triggered_effect>      
+      </effect_group>
+      <effect_group tiered="false">
+        <!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
+          <requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+          <requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+        </triggered_effect>
+        <!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+          <requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
+          <requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+          <requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+          <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+        </triggered_effect>
+      </effect_group>
+      <effect_group tiered="false">
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.1">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.2">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.3">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.35">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="GTE" value="4"/></passive_effect>
+      </effect_group>
+    </item>   
+    
+    <item name="guppybulletAcid">
+      <property name="Extends" value="ammoArrowStone"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletAcid.prefab"/>
+      <property name="StickyMeshFile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletAcidDrop.prefab"/>      
+      <property name="HoldType" value="45"/>
+      <property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>  
+      <property name="StickyOffset" value="0"/>  
+      <property name="IsSticky" value="false"/>          
+      <property name="Material" value="Mmetal"/>
+      <property name="EconomicValue" value="25"/>
+      <property name="EconomicBundleSize" value="5"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property class="Action1">
+        <property name="Gravity" value="-3.5"/>
+      </property>
+
+      <effect_group name="guppybulletAcid" tiered="false"> <!-- ammoArrowIron -->
+        <passive_effect name="EntityDamage" operation="base_set" value="38"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="30"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="8" tags="metal"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0.1" tags="earth,wood,cloth"/>
+        <passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+        <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffguppyAcidBurning">  		</triggered_effect>      
+      </effect_group>
+      <effect_group tiered="false">
+        <!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
+          <requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+          <requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+        </triggered_effect>
+        <!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+          <requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
+          <requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+          <requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
+          <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+        </triggered_effect>
+      </effect_group>
+      <effect_group tiered="false">
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.1">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.2">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.3">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.35">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="GTE" value="4"/></passive_effect>
+      </effect_group>
+    </item>       
+    
+    <item name="guppybulletFire">
+      <property name="Extends" value="ammoArrowStone"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletFire.prefab"/>
+      <property name="StickyMeshFile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppybulletFireDrop.prefab"/>      
+      <property name="HoldType" value="45"/>
+      <property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+      <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>  
+      <property name="StickyOffset" value="0"/> 
+      <property name="IsSticky" value="false"/>          
+      <property name="Material" value="Mmetal"/>
+      <property name="EconomicValue" value="25"/>
+      <property name="EconomicBundleSize" value="5"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property class="Action1">
+        <property name="Gravity" value="-3.5"/>
+      </property>
+
+      <effect_group name="guppybulletFire" tiered="false"> <!-- ammoArrowIron -->
+        <passive_effect name="EntityDamage" operation="base_set" value="28"/>
+        <passive_effect name="BlockDamage" operation="base_set" value="3"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+        <passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+        <passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
+        <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningMolotov">  		</triggered_effect>      
+      </effect_group>
+      <effect_group tiered="false">
+        <!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryCrippled01">
+          <requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
+          <requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+        </triggered_effect>
+        <!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffBurningMolotov">
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="10,36,51,56">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect>
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="7.5,27,38.2,42">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="5,18,25.5,28">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="4.2,14.9,21.1,23.2">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="3.3,11.9,16.8,18.5">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
+          <passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="2.5,9,12.7,14">
+            <requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>            
+        </triggered_effect>
+      </effect_group>
+      <effect_group tiered="false">
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.1">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="1"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.2">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="2"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.3">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="Equals" value="3"/></passive_effect>
+        <passive_effect name="TargetArmor" operation="perc_add" value="-.35">
+          <requirement name="ProgressionLevel" progression_name="perkPenetrator" operation="GTE" value="4"/></passive_effect>
+      </effect_group>
+    </item>       
+
+    <item name="guppyRepeater"> <!-- T3 bows -->
+      <property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,sideAttachments,smallTopAttachments,mediumTopAttachments,attAgility,perkArchery,canHaveCosmetic"/>
+      <property name="DisplayType" value="rangedBow"/>
+      <property name="DescriptionKey" value="guppyRepeater"/>
+      <property name="HoldType" value="69"/>
+      <property name="Meshfile" value="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyCrossbow.prefab"/>
+      <property name="Material" value="MBowCrossbowParts"/> <property name="Weight" value="6"/>
+      <property name="RepairTools" value="resourceRepairKit"/>
+      <property name="FuelValue" value="200"/>
+      <property name="EconomicValue" value="1000"/>
+      <property name="DegradationBreaksAfter" value="false"/>
+      <property name="SoundJammed" value="ItemNeedsRepair"/>
+      <property name="SoundDestroy" value="wooddestroy1"/>
+      <property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+      <property name="CrosshairUpAfterShot" value="false"/> <!-- aimTest -->
+      <property name="Sound_Sight_In" value="crossbow_sight_in"/>
+      <property name="Sound_Sight_Out" value="crossbow_sight_out"/>
+      <property name="SoundUnholster" value="crossbow2_unholster"/>
+      <property name="SoundHolster" value="crossbow2_holster"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property name="RepairExpMultiplier" value="5.5"/>
+      <property name="PickupJournalEntry" value="alternateAmmoTip"/>
+      <property name="UnlockedBy" value="gunCrossbowCompoundSchematic"/>
+      <property name="ShowQuality" value="true"/>
+      <property class="Action0">
+        <property name="Class" value="Launcher"/>
+        <property name="Hitmask_override" value="Arrow"/>
+        <property name="Delay" value=".01"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Magazine_items" value="guppybulletLightning,guppybulletAcid,guppybulletFire"/>
+        <!-- <property name="Reload_time" value="4"/> -->
+        <property name="Sound_start" value="crossbow2_fire"/>
+        <property name="Sound_repeat" value=""/>
+        <property name="Sound_end" value=""/>
+        <property name="Sound_empty" value="dryfire"/>
+        <property name="Sound_reload" value="crossbow2_reload"/>
+      </property>
+      <property class="Action1"> <!-- UseAction -->
+        <property name="Class" value="Zoom"/>
+        <property name="Zoom_max_out" value="75"/>
+        <property name="Zoom_max_in" value="75"/>
+      </property>
+      <effect_group name="guppyRepeater">
+        <passive_effect name="DamageFalloffRange" operation="base_set" value="25"/>
+        <passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> <!-- random effective rng -->
+        <passive_effect name="MaxRange" operation="base_set" value="135"/>
+        <passive_effect name="MagazineSize" operation="base_set" value="10"/>
+        <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".5"/> <!-- 3.4s -->
+
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> <!-- random EntityDmg -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+        <passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> <!-- random BlockDmg -->
+        <passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+        <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkArchery"/> <!-- random DegMax -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> <!-- random WeaponHandling -->
+
+        <passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.35"/>
+        <passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.35"/>
+        <passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".10"/>
+        <passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+        <passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+        <passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+
+        <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2"/>
+        <passive_effect name="WeaponHandling" operation="base_set" value=".5"/> <!-- crosshair reset speed -->
+
+        <passive_effect name="RoundsPerMinute" operation="base_set" value="75"/>
+        <passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+
+        <passive_effect name="KickDegreesVerticalMin" operation="base_set" value="2"/>
+        <passive_effect name="KickDegreesVerticalMax" operation="base_set" value="2"/>
+
+        <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1"/>
+        <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1"/>
+
+        <passive_effect name="DegradationMax" operation="base_set" value="120,250" tier="1,6" tags="perkArchery"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkArchery"/>
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+      </effect_group>
+    </item>
+    
+	</append>
+</configs>

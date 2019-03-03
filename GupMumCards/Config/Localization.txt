@@ -1,0 +1,56 @@
+Key,English
+mumGupCardsGuppycur,A Guppycur Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards01Desc,Guppycur is a co-creator of Medieval Mod,  founder of the Unofficial Modding Discord, and loves his feet.
+mumGupCardsSphereii,A Sphereii Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards02Desc,Sphereii is the backbone of Harmony modding, author of Score, and enjoys basement activities.
+mumGupCardsXyth,A Xyth Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards03Desc,Xyth is the unity Master who developed the system for including Entities in game without additional code, and supplements his time by being chased by alligators.
+mumGupCardsMumpfy,A Mumpfy Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards04Desc,Mumpfy is the master texture man who's influences can be seen in most major overhauls, and he spends his free time checking online images for misplaced pixels
+mumGupCardsV,A V/Tormented Emu Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards05Desc,V is a master coder responsible for the first iteration of horses and custom textures/painting, and she loves the outdoors and riding emus off into the sunset
+mumGupCardsStompyNZ,A StompyNZ Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards06Desc StompyNZ has modded since Valmar times, created BCM and co-authored Bad Panda and Medieval Mod, all while standing at a large indeterminate number of centimeters living a day ahead of the rest of us.
+mumGupCardsGameCard,A 7 Days to Die Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards07Desc,7 Days to Die, the Survival Horde Crafting Game, which has the current record for number of years being in alpha with an official release date of Soon(tm).
+mumGupCardsGambonian,A Gambonian Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards08Desc,Gamida is an original Mod User whose origins trace back to the stone age.  He has an aversion to grass and cosplays as a bandit.
+mumGupCardsDoombringer101,A Doombringer101 Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards09Desc,Doombringer101 has authored server use mods like Realtime Crafting, but he has since retired to spend time playing with Drop Bears.
+mumGupCardsChubbyWanKenobi,A Chubby Wan Kenobi Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards10Desc,Chubby wan Kenobi has playtested many mods, providing valuable feedback.  He currently spends his days in a shelter, re-populating the world.
+mumGupCardsAnabella,An Anabella Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards11Desc,Anabella is most notably known for the Car Respawn mod as well as her Twitch streams.  She lives in a quiet area, utilizing her time keeping other modders in line.
+mumGupCardsAlloc,An Alloc Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards12Desc,Alloc is the modder turned pimp who developed and maintains Server Fixes, a staple mod which all server managers have evolved from.  He can be seen snickering at the feeble attempts of modders.
+mumGupCardsTSBX,A TSBX Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards13Desc,TSBX is a new pimp who mods XML, cracks game bugs, and slays the bitches.
+mumGupCardsDiscordServer,A Discord Server Playing Card, Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards14Desc,The Unofficial Modding Discord using the famed teach a man to fish method, has seen the best and most prolific modders in its ranks.  Beware, it can spawn sharp tongued overhaul modders and expose you to feet pics.
+mumGupCardsGoldenCard,A Golden Card! Collect all 15 Cards to gain an Intelligence Point.  Simply hold the card, then consume it using <E>
+gupMumCards15Desc,You have found the golden card!  Use the code on the back to access the developer branch!
+gupEmptyFrame,Empty Frame
+guppyCardFrame,Framed Card Collection
+guppyCardFramePlaceable,Framed Card Collection
+perkCardCollector_name,Guppycur Modder
+perkCardCollector_desc,You are now a modder and as such a little bit smarter!
+gupMumCards01_name,You have the Guppycur Card, Left Click to Add to your collection
+gupMumCards02_name,You have the Sphereii Card, Left Click to Add to your collection
+gupMumCards03_name,You have the Xyth Card, Left Click to Add to your collection
+gupMumCards04_name,You have the Mumpfy Card, Left Click to Add to your collection
+gupMumCards05_name,You have the V Card, Left Click to Add to your collection
+gupMumCards06_name,You have the StompyNZ Card, Left Click to Add to your collection
+gupMumCards07_name,You have the 7 Days to Die Game Card, Left Click to Add to your collection
+gupMumCards08_name,You have the Gambonian Card, Left Click to Add to your collection
+gupMumCards09_name,You have the Doombringer101 Card, Left Click to Add to your collection
+gupMumCards10_name,You have the Chubby Wan Kenobi Card, Left Click to Add to your collection
+gupMumCards11_name,You have the Anabella Card, Left Click to Add to your collection
+gupMumCards12_name,You have the Alloc Card, Left Click to Add to your collection
+gupMumCards13_name,You have the TSBX Card, Left Click to Add to your collection
+gupMumCards14_name,You have the Unofficial Modding Discord Card, Left Click to Add to your collection
+gupMumCards15_name,You have the Golden Card, Left Click to Add to your collection
+gupMumCardCollector_name,You have the entire Guppycur Series
+gupMumCards01_desc,Test
+gupMumCardCollector_desc,The Guppycur Card Collection
+gupCardCollection,Guppycur Card Collection
+gupCardCollection_desc,The Guppycur Card Collection

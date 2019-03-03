@@ -1,0 +1,19 @@
+<configs>
+	<append xpath="/entity_classes">
+
+
+    <entity_class name="guppyOrcDardan" extends="zombieWightFeral">
+			<property  name="Tags" value="entity,zombie,brute"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyOrcPack.unity3d?guppyOrcDardanPostBlendtree.prefab"/>
+			<property name="WalkType" value="7"/>
+			<property name="HandItem" value="meleeHandZombieCop"/>
+			<property name="PhysicsBody" value="guppyMixamo"/>
+			<property name="HasRagdoll" value="false"/>		
+			<property name="RootMotion" value="true"/>
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value="0.5, 1.5"/>			
+	</entity_class>
+	
+	</append>
+</configs>

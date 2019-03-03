@@ -1,0 +1,10 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+guppyHumanoidSoldier01,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier01New,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier02,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier03,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier04,entityclasses,Entity,,Human Soldier with Rocket Launcher,,,,,
+guppyHumanoidSoldier05,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier06,entityclasses,Entity,,Human Soldier,,,,,
+guppyHumanoidSoldier07,entityclasses,Entity,,Human Soldier with Flamethrower,,,,,
+guppyHumanoidSoldier08,entityclasses,Entity,,Human Soldier,,,,,

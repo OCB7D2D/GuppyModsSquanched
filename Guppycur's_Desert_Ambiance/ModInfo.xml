@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppycur's Desert Ambiance" />
+		<Description value="Adds some ambient dust devils and dust storms to the Desert Biome" />
+		<Author value="Guppycur"/>
+		<Version value="1.0.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>

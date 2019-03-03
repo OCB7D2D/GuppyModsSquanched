@@ -1,0 +1,7 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+guppyHammerOfGuppy,items,mod,New,Hammer of the Guppy,,,,,
+guppybulletLightning,items,mod,New,Lightning Bullet,,,,,
+guppybulletAcid,items,mod,New,Acid Bullet,,,,,
+guppybulletFire,items,mod,New,Fire Bullet,,,,,
+guppyRepeater,items,mod,New,Guppy Repeater Gun,,,,,
+guppyWickedSword,items,mod,New,Wicked Sword of Guppy,,,,,

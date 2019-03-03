@@ -1,0 +1,36 @@
+<configs>
+<append xpath="/entitygroups">
+
+	<entitygroup name="guppyVehicles">
+		<entity name="vehicleGuppyMilitaryTruck" prob="0.3"/>
+		<entity name="vehicleGuppyMilitaryCar" prob="0.3"/>
+		<entity name="vehicleGuppyPickup"/>
+		<entity name="vehicleGuppyHotRod" prob="0.3"/>
+		<entity name="vehicleGuppyMotorCycle"/>
+		<entity name="vehicleGuppySedan"/>
+		<entity name="vehicleGuppyVan"/>
+		<entity name="vehicleGuppyFireTruck"/>
+		<entity name="vehicleGuppyMotorCycle2"/>    
+		<entity name="vehicleGuppyAmbulance"/>
+		<entity name="vehicleGuppyAmbulanceDamaged"/>
+		<entity name="vehicleGuppyPoliceCar"/>
+    <entity name="vehicleGuppyBigRig"/>
+    <entity name="vehicleGuppyEvo"/>  
+    <entity name="vehicleGuppyWhiteSedan" prob="0.3"/>  
+    <entity name="vehicleGuppyWhiteSedanRusted"/>  
+    <entity name="vehicleGuppyTaxi" prob="0.3"/>  
+    <entity name="vehicleGuppyTaxiRusted"/>      
+    <entity name="vehicleGuppyOldChevy" prob="0.3"/>
+    <entity name="vehicleGuppyBuggy" prob="0.3"/>
+    <entity name="vehicleGuppyQuad" prob="0.3"/>    
+    <entity name="vehicleGuppyTractor" prob="0.3"/>
+    <entity name="vehicleGuppyBigRig2" prob="0.3"/>
+    <entity name="vehicleGuppyBoxTruck" prob="0.3"/>
+    <entity name="vehicleGuppyBMWred" prob="0.3"/>
+    <entity name="vehicleGuppyBMWwhite" prob="0.3"/>    
+    <entity name="vehicleGuppyForklift" prob="0.1"/> 
+    <entity name="vehicleGuppyArmoredCobra" prob="0.05"/>    
+    <entity name="vehicleGuppyFastback" prob="0.05"/>
+	</entitygroup>
+</append>
+</configs>

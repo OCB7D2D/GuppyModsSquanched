@@ -1,0 +1,108 @@
+	<configs>
+
+	<append xpath="buffs/buff[@name='buffStatusCheck01']">
+
+		<effect_group name="Guppy Kills">    
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" target="self" buff="buffguppyKillTracker"/>    
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" target="self" cvar="ZombiekillCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" target="self" cvar="PlayerkillCounter" operation="set" value="0"/>			
+			<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" target="self" cvar="ZombiekillCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" target="self" cvar="PlayerkillCounter" operation="set" value="0"/>	
+		</effect_group> 
+
+	</append>
+	
+    <append xpath="/buffs">
+	  
+      <buff name="buffguppyKillTracker" name_key="buffguppyKillTracker_name" description_key="buffguppyKillTracker_desc">
+        <stack_type value="replace"/>
+        <duration value="2"/>
+        <update_rate value="1"/>      
+          <effect_group name="guppy CVarZombie">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="zombie"/>	
+			  <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="ZombiekillCounter" operation="add" value="1"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ZombiekillCounter" operation="add" value="1"/>
+		  </effect_group>
+		  <effect_group name="guppy Add Zombie Kill Prefab">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="NotEquals" value="25"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="NotEquals" value="100"/>
+			  <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupZombieKills" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillZombieSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />
+          </effect_group>
+		  
+          <effect_group name="guppy CVarPlayer">
+ 			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="player"/>		  
+			  <triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="PlayerkillCounter" operation="add" value="1"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="PlayerkillCounter" operation="add" value="1"/>	
+		  </effect_group>
+		  <effect_group name="guppy Add Player Kill Prefab">
+ 			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="player"/>
+			  <requirement name="CVarCompare" cvar="PlayerkillCounter" operation="NotEquals" value="7"/>
+			  <requirement name="CVarCompare" cvar="PlayerkillCounter" operation="NotEquals" value="15"/>
+			  <requirement name="CVarCompare" cvar="PlayerkillCounter" operation="NotEquals" value="25"/>
+			  <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupPlayerKills" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillPlayerSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />  
+          </effect_group>	
+
+		  <effect_group name="guppy Add Zombie Killstreak (50)">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="Equals" value="25"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupZombieKills25" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillZombieSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />
+          </effect_group>
+		  <effect_group name="guppy Add Zombie Killstreak (100)">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="zombie"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="Equals" value="100"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupZombieKills100" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillZombieSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillZombieSign" />
+          </effect_group>	
+
+		  <effect_group name="guppy Add Player Killstreak (7)">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="player"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="Equals" value="7"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupPlayerKills7" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillPlayerSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />
+          </effect_group>
+		  <effect_group name="guppy Add Player Killstreak (15)">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="player"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="Equals" value="15"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupPlayerKills15" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillPlayerSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />
+          </effect_group>	
+		  <effect_group name="guppy Add Player Killstreak (25)">
+			  <requirement name="EntityTagCompare" tags="player"/>
+			  <requirement name="EntityTagCompare" target="other" tags="player"/>
+			  <requirement name="CVarCompare" cvar="ZombiekillCounter" operation="Equals" value="25"/>
+			  <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="gupPlayerKills25" play_in_head="true"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupKillsBanners.unity3d?guppyKillPlayerSign" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyKillPlayerSign" />
+          </effect_group>			  
+      </buff>
+
+	</append>	
+	  
+  </configs>

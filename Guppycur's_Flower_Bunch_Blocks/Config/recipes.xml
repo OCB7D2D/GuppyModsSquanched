@@ -1,0 +1,46 @@
+<configs>
+
+<append xpath="/recipes">
+	
+<recipe name="guppyBlockFlowerVase" count="1" craft_time = "8" >
+	<ingredient name="resourceYuccaFibers" count="2"/>
+	<ingredient name="resourceRockSmall" count="2"/>
+	<ingredient name="resourceClayLump" count="1"/>
+	</recipe>
+
+<recipe name="guppyBlockFlowerStand" count="1" craft_time = "4" >
+	<ingredient name="resourceScrapIron" count="4"/>
+</recipe>
+
+<recipe name="guppyBlockFlowerRedBunch" count="1" craft_time = "4" >
+	<ingredient name="resourceYuccaFibers" count="4"/>
+	<ingredient name="resourceRockSmall" count="4"/>
+	<ingredient name="resourceClayLump" count="2"/>
+</recipe>
+	
+<recipe name="guppyBlockFlowerYellowBunch" count="1" craft_time = "4" >
+	<ingredient name="resourceYuccaFibers" count="4"/>
+	<ingredient name="resourceRockSmall" count="4"/>
+	<ingredient name="resourceClayLump" count="2"/>
+</recipe>
+
+<recipe name="guppyBlockFlowerPurpleBunch" count="1" craft_time = "4" >
+	<ingredient name="resourceYuccaFibers" count="4"/>
+	<ingredient name="resourceRockSmall" count="4"/>
+	<ingredient name="resourceClayLump" count="2"/>
+</recipe>
+
+<recipe name="guppyBlockFlowerLightPurpleBunch" count="1" craft_time = "4" >
+	<ingredient name="resourceYuccaFibers" count="4"/>
+	<ingredient name="resourceRockSmall" count="4"/>
+	<ingredient name="resourceClayLump" count="2"/>
+</recipe>
+
+<recipe name="guppyBlockFlowerWhiteBunch" count="1" craft_time = "4" >
+	<ingredient name="resourceYuccaFibers" count="4"/>
+	<ingredient name="resourceRockSmall" count="4"/>
+	<ingredient name="resourceClayLump" count="2"/>
+</recipe>
+
+</append>
+</configs>

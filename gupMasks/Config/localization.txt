@@ -1,0 +1,29 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text
+gupMaskBlank,items,clothing,,,Blank Mask
+gupMaskAmericanItem,items,clothing,,,American Mask
+gupMaskBritishItem,items,clothing,,,British Mask
+gupMaskBurnedItem,items,clothing,,,Burned Mask
+gupMaskClownItem,items,clothing,,,Clown Mask
+gupMaskGhostItem,items,clothing,,,Ghost Mask
+gupMaskLeatherItem,items,clothing,,,Leather Mask
+gupMaskLeatherClownItem,items,clothing,,,Leather Submissive Mask
+gupMaskRussianItem,items,clothing,,,Russian Mask
+gupMaskSatanicItem,items,clothing,,,Satanic Mask
+gupMaskSkeletonItem,items,clothing,,,Skeleton Mask
+gupMaskPigItem,items,clothing,,,Pig Mask
+gupMaskDeerItem,items,clothing,,,Deer Mask
+gupMaskSnowmanItem,items,clothing,,,Snowman Mask
+guppyMaskBlankDesc,items,Clothes,,,"Blank mask, use dyes and other items to create a face mask."
+guppyMaskGroupDesc,items,Clothes,,,"Provides no protection.  Left Click to apply mask.  Right Click to take mask off."	
+gupMaskAmericanMod,items,clothing,,,American Mask Modification
+gupMaskBritishMod,items,clothing,,,British Mask Modification
+gupMaskBurnedMod,items,clothing,,,Burning Mask Modification
+gupMaskClownMod,items,clothing,,,Clown Mask Modification
+gupMaskGhostMod,items,clothing,,,Ghost Mask Modification
+gupMaskLeatherMod,items,clothing,,,Leather Mask Modification
+gupMaskLeatherClownMod,items,clothing,,,Sub Mask Modification
+gupMaskRussianMod,items,clothing,,,Russian Mask Modification
+gupMaskSatanicMod,items,clothing,,,Satanic Mask Modification
+gupMaskSkeletonMod,items,clothing,,,Skeleton Mask Modification
+gupMaskModGroupDesc,items,Clothes,,,"Add to headware clothing for visual mask."
+modDyeWhite,item_modifiers,mod,,,Dye: White

@@ -1,0 +1,88 @@
+<configs>
+
+	<append xpath="/Sounds">
+	
+		<SoundDataNode name="gupZombieKills"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Destroyed_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Disasterous_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Explosive_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?HolyShit_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Incredible_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Outstanding_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Tremendous_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Unbelievable_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Wrecked_01" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+		<SoundDataNode name="gupZombieKills25"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?SliceAndDice_01" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="gupZombieKills100"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?DamnYoureGood_01" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>		
+		
+		<SoundDataNode name="gupPlayerKills"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Goddamn_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Mayhem_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Fucked_01" />
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Damn_01" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>		
+		
+		<SoundDataNode name="gupPlayerKills7"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?7toSlaughter" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="gupPlayerKills15"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?pimpocide" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>	
+		
+		<SoundDataNode name="gupPlayerKills25"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKillStreakSounds.unity3d?Cheater" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>		
+		
+	</append>
+	
+</configs>

@@ -1,0 +1,11 @@
+<configs>
+	<append xpath="/recipes">
+
+		<recipe name="guppyFireworkItem" count="1" craft_area="workbench" craft_time="25">
+	        <ingredient name="resourcePaper" count="4"/>
+	        <ingredient name="resourceGunPowder" count="5"/>
+	        <ingredient name="resourceWood" count="1"/>
+		</recipe>		
+		
+	</append>
+</configs>

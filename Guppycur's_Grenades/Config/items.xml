@@ -1,0 +1,95 @@
+<configs>
+	<append xpath="/items">
+  
+		<item name="GuppysSmokeGrenade">
+      <property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+      <property name="CustomIcon" value="GuppysSmokeGrenade" />     
+      <property name="ItemTypeIcon" value="explosion"/>
+      <property name="DisplayType" value="ammoGrenadeContact"/>
+      <property name="Class" value="ItemClassTimeBomb"/>
+      <property name="DescriptionKey" value="GuppysSmokeGrenadeDesc"/>      
+      <property name="HoldType" value="12"/>
+			<property name="Meshfile" value="#@modfolder:Resources/GuppysGrenades.unity3d?GuppysSmokeGrenadeHandPrefab.prefab"/>
+			<property name="DropMeshfile" value="#@modfolder:Resources/GuppysGrenades.unity3d?GuppysSmokeGrenadeThrownPrefab.prefab"/>      
+      <property name="DropScale" value=".1"/>
+      <property name="Material" value="Mmetal"/>
+      <property name="Stacknumber" value="25"/>
+      <property name="EconomicValue" value="41"/>
+      <property name="Weight" value="0"/>
+      <!-- <property name="Explosion.ParticleIndex" value="13"/> -->
+      <property name="Explosion.RadiusBlocks" value="1"/>
+      <property name="Explosion.DamageBonus.earth" value="0"/> 
+      <property name="Explosion.DamageBonus.water" value="0"/>
+      <property name="Explosion.BlastPower" value="0"/> 
+      <property name="FuseTime" value="60"/>
+      <property name="FusePrimeOnActivate" value="false"/>
+      <property name="ExplodeOnHit" value="false"/>
+      <property name="StickPercent" value="0"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property name="SoundUnholster" value="grenade_unholster"/>
+      <property class="Action0">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> 
+        <property name="Throw_strength_default" value="8"/>
+        <property name="Throw_strength_max" value="50"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="grenade_throw"/>
+        <property name="Gravity" value="-5"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+      </property>
+      <property class="Action1">
+        <property name="Class" value="Activate"/>
+        <property name="Delay" value="1"/>
+        <property name="Sound_start" value="grenade_pullpin"/>
+      </property>
+      <property name="ThrowableDecoy" value="true"/>
+		</item>
+
+    <item name="GuppysFlashBangGrenade"> 
+      <property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+      <property name="CustomIcon" value="GuppysFlashbangGrenade" />     
+      <property name="ItemTypeIcon" value="explosion"/>
+      <property name="DisplayType" value="ammoGrenadeContact"/>
+      <property name="Class" value="ItemClassTimeBomb"/>
+      <property name="DescriptionKey" value="GuppysFlashBangGrenadeDesc"/>       
+      <property name="HoldType" value="12"/>
+      <property name="Meshfile" value="#@modfolder:Resources/GuppysGrenades.unity3d?guppysFlashBangGrenadeHandPrefab.prefab"/>
+      <property name="DropScale" value=".4"/>
+      <property name="Material" value="Mmetal"/>
+      <property name="Stacknumber" value="25"/>
+      <property name="EconomicValue" value="41"/>
+      <property name="Weight" value="0"/>
+      <property name="Explosion.ParticleIndex" value="13"/>
+      <property name="Explosion.RadiusBlocks" value="1"/>
+      <property name="Explosion.DamageBonus.earth" value="0"/> 
+      <property name="Explosion.DamageBonus.water" value="0"/>
+      <property name="Explosion.BlastPower" value="0"/> 
+      <property name="FuseTime" value="6"/>
+      <property name="FusePrimeOnActivate" value="true"/>
+      <property name="ExplodeOnHit" value="true"/>
+      <property name="StickPercent" value="0"/>
+      <property name="Group" value="Ammo/Weapons"/>
+      <property name="SoundUnholster" value="grenade_unholster"/>
+      <property class="Action0">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> 
+        <property name="Throw_strength_default" value="8"/>
+        <property name="Throw_strength_max" value="50"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="grenade_throw"/>
+        <property name="Gravity" value="-5"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+      </property>
+      <property class="Action1">
+        <property name="Class" value="Activate"/>
+        <property name="Delay" value="1"/>
+        <property name="Sound_start" value="grenade_pullpin"/>
+      </property>
+      <property name="ThrowableDecoy" value="true"/>
+      <effect_group tiered="false">
+        <triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="6" buff="GuppyFlashBang"/>
+      </effect_group>
+    </item>
+ 
+	</append>
+</configs>

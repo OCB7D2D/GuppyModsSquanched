@@ -1,0 +1,121 @@
+<configs>
+
+	<append xpath="/recipes">
+
+	<recipe name="gupMaskAmericanItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlue" count="1"/>
+	</recipe>
+	
+	<recipe name="gupMaskBritishItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlue" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskBurnedItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskClownItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskGhostItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskLeatherItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="resourceScrapIron" count="1"/>
+		<ingredient name="resourceLeather" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskLeatherClownItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+		<ingredient name="resourceScrapIron" count="1"/>
+		<ingredient name="resourceLeather" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskRussianItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlue" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskSatanicItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeRed" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskSkeletonItem" count="1" craft_time="5">
+		<ingredient name="gupMaskBlank" count="1"/>
+		<ingredient name="modDyeWhite" count="1"/>
+		<ingredient name="modDyeBlack" count="1"/>
+	</recipe>
+
+	<recipe name="gupMaskPigItem" count="1" craft_time="5">
+		<ingredient name="resourceLeather" count="100"/>
+		<ingredient name="resourceScrapIron" count="10"/>
+	</recipe>	
+	<recipe name="gupMaskDeerItem" count="1" craft_time="5">
+		<ingredient name="resourceLeather" count="100"/>
+		<ingredient name="resourceScrapIron" count="10"/>
+		<ingredient name="resourceElectricParts" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskSnowmanItem" count="1" craft_time="5">
+		<ingredient name="resourceLeather" count="100"/>
+		<ingredient name="resourceScrapIron" count="10"/>
+		<ingredient name="modDyeWhite" count="1"/>
+	</recipe>		
+	
+	<recipe name="gupMaskAmericanMod" count="1" craft_time="5">
+		<ingredient name="gupMaskAmericanItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskBritishMod" count="1" craft_time="5">
+		<ingredient name="gupMaskBritishItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskBurnedMod" count="1" craft_time="5">
+		<ingredient name="gupMaskBurnedItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskClownMod" count="1" craft_time="5">
+		<ingredient name="gupMaskClownItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskGhostMod" count="1" craft_time="5">
+		<ingredient name="gupMaskGhostItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskLeatherMod" count="1" craft_time="5">
+		<ingredient name="gupMaskLeatherItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskLeatherClownMod" count="1" craft_time="5">
+		<ingredient name="gupMaskLeatherClownItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskRussianMod" count="1" craft_time="5">
+		<ingredient name="gupMaskRussianItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskSatanicMod" count="1" craft_time="5">
+		<ingredient name="gupMaskSatanicItem" count="1"/>
+	</recipe>	
+	<recipe name="gupMaskSkeletonMod" count="1" craft_time="5">
+		<ingredient name="gupMaskSkeletonItem" count="1"/>
+	</recipe>
+	
+	</append>
+</configs>

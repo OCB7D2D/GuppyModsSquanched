@@ -1,0 +1,253 @@
+	<configs>
+	
+	<append xpath="buffs/buff[@name='buffStatusCheck01']">
+
+		<effect_group name="Set Mask">    
+			<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="1"/>			
+		</effect_group> 
+
+	</append>
+<!-- X is Up/Down where - is up, Y Left/Right where + is left, Z is Front/Back where + is forward-->  
+    <append xpath="/buffs">
+
+		<buff name="buffMaskEquipAmerican" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			
+			<effect_group name="GuppyMaskAmerican">
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskAmerican" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskAmerican" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskAmerican" /> 
+			</effect_group>
+		</buff>   
+
+		<buff name="buffMaskEquipBritish" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBritish" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskBritish" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskBritish" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipBurned" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskBurned" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskBurned" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskBurned" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipClown" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskClown" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskClown" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskClown" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipGhost" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskGhost" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskGhost" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskGhost" /> 
+			</effect_group>
+		</buff>  
+		
+		<buff name="buffMaskEquipLeather" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeather" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskLeather" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskLeather" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipLeatherClown" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskLeatherClown" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskLeatherClown" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskLeatherClown" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipRussian" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskRussian" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskRussian" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskRussian" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipSatanic" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSatanic" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>	
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskSatanic" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskSatanic" /> 
+			</effect_group>
+		</buff>  
+
+		<buff name="buffMaskEquipSkeleton" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSkeleton" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+			  </triggered_effect>
+			
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskSkeleton" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskSkeleton" /> 
+			</effect_group>
+		</buff>  
+		
+		<buff name="buffMaskEquipPig" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskPig" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskPig" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskPig" /> 
+			  
+			</effect_group>
+		</buff> 
+		<buff name="buffMaskEquipDeer" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskDeer" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>			  
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskDeer" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskDeer" /> 
+			  
+			</effect_group>
+		</buff> 
+		<buff name="buffMaskEquipSnowman" name_key="buffMaskEquipName" description_key="buffMaskEquipDesc" tooltip_key="Equipped Mask"> 
+			<stack_type value="replace"/>
+			<duration value="0"/>
+
+			<effect_group>
+			  <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/gupMaskMod.unity3d?gupMaskSnowman" parent_transform="Head" local_offset="-.094,0,.055" local_rotation="0,0,90">
+				<requirement name="!IsFPV"/>
+				<requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>
+			  
+			  <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" target="self" cvar="gupHasMask" operation="set" value="2">
+			    <requirement name="CVarCompare" cvar="gupHasMask" operation="Equals" value="1"/>
+			  </triggered_effect>			  
+			  
+			  <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="gupMaskSnowman" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="gupMaskSnowman" /> 
+			  
+			</effect_group>
+		</buff> 		
+    
+    </append>
+  
+  </configs>

@@ -1,0 +1,10 @@
+<blockplaceholders>
+	<append xpath="/blockplaceholders">
+
+	<placeholder name="woodStairs25">
+		<block name="woodStairs25_Normal" prob="0.5"/>
+		<block name="woodStairs25_Trap" prob="0.1"/>
+	</placeholder>
+  
+  </append>
+</blockplaceholders>

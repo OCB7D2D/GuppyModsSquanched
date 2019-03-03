@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppycur's Elevator" />
+		<Description value="Hitboxes are weird, but it does work..." />
+		<Author value="guppycur" />
+		<Version value="1.0" />
+		
+	</ModInfo>
+</xml>

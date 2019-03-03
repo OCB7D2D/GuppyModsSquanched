@@ -1,0 +1,102 @@
+<configs>
+	<append xpath="/buffs" >
+    
+  <buff name="buffguppyHammerHit" name_key="buffguppyHammerHit" description_key="buffguppyHammerHit" tooltip_key="buffguppyHammerHit" icon="ui_game_symbol_brokenbone" icon_color="255,128,0">
+		<damage_type value="crushing"/>
+		<stack_type value="ignore"/>
+		<duration value="5"/><!-- set this to slightly longer than your particle, so the particle plays fully -->
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyFireDragonParticle" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="Origin"/><!-- use physicsbodies to determine what bone to attach to. diff local variables for each bone. also can use 'Origin'. that's a static bone that doesn't move with animation, just stays under the enemy. -->
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyFireDragonParticle" />
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyFireDragonParticle" />
+				<triggered_effect trigger="onSelfDied" action="RemovePrefabFromEntity" prefab="guppyFireDragonParticle" />
+        
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="guppyFireDragonParticle">
+				<requirement name="NotHasBuff" buff="buffguppyHammerHit"/>
+			</triggered_effect>
+      
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="10,36,51,56">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="7.5,27,38.2,42">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
+
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="5,18,25.5,28">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
+
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="4.2,14.9,21.1,23.2">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="3.3,11.9,16.8,18.5">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,8,14,18" value="2.5,9,12.7,14">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>      
+      
+		</effect_group>
+	</buff>
+  
+	<buff name="buffguppyAcidBurning" hidden="true">
+		<damage_type value="corrosive"/>
+		<stack_type value="replace"/><duration value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffAcidDuration" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffAcidDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="$buffAcidDuration" operation="LT" value="14"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffAcidDuration" operation="set" value="14"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffAcidDuration" operation="set" value="14"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="$buffAcidDuration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffAcidDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffAcidBurning"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffguppyIsOnAcid"/>
+
+			<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="4,12.3,15">
+				<requirement name="EntityTagCompare" tags="player"/>
+			</passive_effect>
+
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="1.5"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="!EntityTagCompare" tags="player"/>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="8,26.9,30">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="0"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="6,18.4,22.5">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="1"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="4,12.3,15">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="2"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="3.32,10.2,12.5">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="3"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="2.64,8.1,9.9">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="4"/></passive_effect>
+				<passive_effect name="HealthChangeOT" operation="base_subtract" duration="0,12,16" value="2,6.1,7.5">
+					<requirement name="CVarCompare" cvar="_difficulty" operation="Equals" value="5"/></passive_effect>
+		</effect_group>
+	</buff>  
+  
+  <buff name="buffguppyIsOnAcid" name_key="buffguppyIsOnAcid" description_key="buffguppyIsOnAcid" tooltip_key="buffguppyIsOnAcid" icon="ui_game_symbol_brokenbone" icon_color="255,128,0">
+		<damage_type value="corrosive"/>
+		<stack_type value="ignore"/>
+		<duration value="5"/><!-- set this to slightly longer than your particle, so the particle plays fully -->
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/guppyFantasyModExtras.unity3d?guppyParticleAcid" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="Hips"/><!-- use physicsbodies to determine what bone to attach to. diff local variables for each bone. also can use 'Origin'. that's a static bone that doesn't move with animation, just stays under the enemy. -->
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyParticleAcid" />
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyParticleAcid" />
+				<triggered_effect trigger="onSelfDied" action="RemovePrefabFromEntity" prefab="guppyParticleAcid" />
+        
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="guppyParticleAcid">
+				<requirement name="NotHasBuff" buff="buffguppyIsOnAcid"/>
+			</triggered_effect>
+      
+		</effect_group>
+	</buff>  
+  
+	</append>
+	
+</configs>

@@ -1,0 +1,3 @@
+Key,Source,Context,Changes,English,japanese
+guppyRobotDog,items,mod,New,Sphereii the friendly companion,"ロボ犬Sphereii君"
+guppyRobotDog_desc,items,mod,New,"A helpful travel companion during these dark times.\nIt may need a little swat on the nose to get its attention, but it will do its best to follow you and help carry some of your gear.\n\nIf you raise your Animal Tracker perk to Lv 1, you'll be able to track your Sphereii.","荷物持ちをしてくれる可愛いお供。\n\n忘れっぽくて、たまにフラフラとどこかへ行ってしまいますが、前に立って思い出させてあげると、またついてくるようになります。\n\n忘れっぽくて武器用ですが、一生懸命あなたの役に立とうとします。\n\nアニマルトラッカー・パークを1レベル上げると、マップやコンパスに位置が表示されるようになります。"

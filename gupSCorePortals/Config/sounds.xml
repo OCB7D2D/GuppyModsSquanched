@@ -1,0 +1,17 @@
+<configs>
+
+	<append xpath="/Sounds">
+	
+		<SoundDataNode name="guppyKeyUsed"> 
+			<AudioSource name="Sounds/AudioSource_VO"/>
+				<AudioClip ClipName="#@modfolder:Resources/gupKeyCardSound.unity3d?guppyKeyCardSound" />
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value=".5"/> 
+			<MaxVoices value="1"/>
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+		
+	</append>
+	
+</configs>

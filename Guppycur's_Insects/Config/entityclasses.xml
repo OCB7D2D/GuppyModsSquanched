@@ -1,0 +1,39 @@
+<configs>
+	<append xpath="/entity_classes">
+
+		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying">
+			<property name="Tags" value="entity,zombie,hostile"/>
+			<property name="Mass" value="100"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyInsectMod.unity3d?guppyInsectMod.prefab"/>
+			  <property name="MoveSpeed" value="1"/>
+			  <property name="MoveSpeedAggro" value="2.1, 2.1"/>
+			  <property name="MaxTurnSpeed" value="190"/>      
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="ExperienceGain" value="250"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="TimeStayAfterDeath" value="300"/>			
+			<property name="SightRange" value="70"/>
+			<property name="SoundRandomTime" value="5.0"/>
+			<property name="SoundRandom" value="animalhornetroam" />
+			<property name="SoundAlert" value="animalhornetalert"/>
+			<property name="SoundHurt" value="animalhornethurt"/>
+			<property name="SoundDeath" value="animalhornetdeath"/>
+			<property name="SoundAttack" value="animalhornetattack"/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="390"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/> 
+			<drop event="Harvest" name="foodHoney" tag="butcherHarvest" count="2"/>
+		</entity_class>	
+		
+	</append>
+</configs>

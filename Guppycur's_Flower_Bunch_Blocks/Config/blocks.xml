@@ -1,0 +1,75 @@
+<configs>
+	<append xpath="/blocks">
+
+    <block name="guppyBlockFlowerVase">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerVase.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerVase" />   
+      <property name="CanPickup" value="true"/>      
+    </block>
+    
+    <block name="guppyBlockFlowerStand">
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerStand.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerStand" /> 
+      <property name="CanPickup" value="true"/>       
+    </block>
+
+    <block name="guppyBlockFlowerRedBunch">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerRedBunch.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerRedBunch" />  
+      <property name="CanPickup" value="true"/>       
+    </block>
+
+    <block name="guppyBlockFlowerYellowBunch">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerYellowBunch.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerYellowBunch" /> 
+      <property name="CanPickup" value="true"/>       
+    </block>
+
+    <block name="guppyBlockFlowerPurpleBunch">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerPurpleBunch.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerPurpleBunch" />
+      <property name="CanPickup" value="true"/>       
+    </block>
+
+    <block name="guppyBlockFlowerLightPurpleBunch">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerLightPurpleBunch.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerLightPurpleBunch" /> 
+      <property name="CanPickup" value="true"/>       
+    </block>
+
+    <block name="guppyBlockFlowerWhiteBunch">
+      <property name="Material" value="Mglass"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyBlocksFlowerBunch.unity3d?guppyBlockFlowerWhiteBunch.prefab"/>
+      <property name="CustomIcon" value="guppyBlockFlowerWhiteBunch" />   
+      <property name="CanPickup" value="true"/>       
+    </block>    
+
+  </append>
+</configs>

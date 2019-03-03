@@ -1,0 +1,8 @@
+<configs>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal1</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal2</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal3</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal4</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal5</append>
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingElectrician']/effect_group/passive_effect[@level='75,100']/@tags">,guppyFuturePortal6</append>
+</configs> 

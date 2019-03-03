@@ -1,0 +1,13 @@
+<configs>
+	<append xpath="/lootcontainers">
+  
+    <lootcontainer id="130" count="0" size="9,4" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+    </lootcontainer> 
+
+    </append>
+
+    <insertAfter xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']/item[@name='drugHerbalAntibioticsSchematic']" >
+      <item name="guppyRobotDogSchematic" count="1" prob="1"/>
+    </insertAfter>
+    
+</configs>

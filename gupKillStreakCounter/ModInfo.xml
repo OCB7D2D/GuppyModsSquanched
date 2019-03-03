@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppys Kill Streak Counter" />
+		<Description value="Adds PvP Kill confirmation and streaks" />
+		<Author value="GuppyCur, Mumpfy (Art), Goldmanvision (Audio)" />
+		<Version value="1.0" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>

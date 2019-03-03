@@ -1,0 +1,9 @@
+<configs>
+
+  <insertAfter xpath="/worldgeneration/biomes/biome[@name='desert']/decorations/decoration[@blockname='treeOakSml01']">
+       <decoration type="block" blockname="guppyplantedAloeAmbianceBlock" prob =".0002"/>
+       <decoration type="block" blockname="guppyplantedAloeAmbianceBlockmed" prob =".0002"/>	   
+	   <decoration type="block" blockname="guppyplantedAloeAmbianceBlocksmall" prob =".0002"/>
+  </insertAfter>
+  
+</configs>

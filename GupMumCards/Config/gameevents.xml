@@ -1,0 +1,14 @@
+<configs>
+<append xpath="/gameevents">
+
+	<action_sequence name="action_givegupCardCollection">
+
+		<action class="AddItems">
+			<property name="added_items" value="gupCardCollection" />
+			<property name="added_item_counts" value="1" />
+		</action>
+
+	</action_sequence>
+  
+</append>
+</configs>

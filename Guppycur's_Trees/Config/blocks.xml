@@ -1,0 +1,276 @@
+<configs>
+	<append xpath="/blocks">
+
+<block name="guppyTreeBroadleafSummerLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeBroadleafSummerLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeBroadleafSummerMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeBroadleafSummerMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+	<property name="PlantGrowing.Next" value="guppyTreeBroadleafSummerLg"/>  
+</block>
+<block name="guppyTreeBroadleafSummerSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeBroadleafSummerSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+	<property name="PlantGrowing.Next" value="guppyTreeBroadleafSummerMed"/>    
+</block>
+
+<block name="guppyTreeConiferSummerLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeConiferSummerLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeConiferSummerMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeConiferSummerMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeConiferSummerLg"/>   
+</block>
+<block name="guppyTreeConiferSummerSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeConiferSummerSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeConiferSummerMed"/>   
+</block>
+
+<block name="guppyTreeElmFallLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmFallLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeElmFallMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmFallMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeElmFallLg"/>   
+</block>
+<block name="guppyTreeElmFallSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmFallSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeElmFallMed"/>   
+</block>
+
+<block name="guppyTreeElmSummerLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmSummerLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeElmSummerMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmSummerMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeElmSummerLg"/>   
+</block>
+<block name="guppyTreeElmSummerSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeElmSummerSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeElmSummerMed"/>   
+</block>
+
+<block name="guppyTreePalmSummerLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreePalmSummerLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,-.5,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreePalmSummerMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreePalmSummerMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,-.5,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreePalmSummerLg"/>   
+</block>
+<block name="guppyTreePalmSummerSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreePalmSummerSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,-.5,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreePalmSummerMed"/>  
+</block>
+
+<block name="guppyTreeWhiteOakFallLg">
+	<property name="Extends" value="treeMaster"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakFallLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeWhiteOakFallMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakFallMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeWhiteOakFallLg"/>   
+</block>
+<block name="guppyTreeWhiteOakFallSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakFallSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+  <property name="PlantGrowing.Next" value="guppyTreeWhiteOakFallMed"/>   
+</block>
+
+<block name="guppyTreeWhiteOakWinterLg">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakWinterLg.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,19,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeWhiteOakWinterMed">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakWinterMed.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,12,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+<block name="guppyTreeWhiteOakWinterSmall">
+	<property name="Extends" value="treeMasterGrowing"/>
+      <property name="Model" value="#@modfolder:Resources/guppycurSpeedtrees.unity3d?guppyTreeWhiteOakWinterSmall.prefab"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,4,1"/>
+	<property name="BigDecorationRadius" value="2"/>
+	<property name="CanPlayersSpawnOn" value="false"/>
+	<property name="ParticleOnDeath" value="treeGib_small_dust"/>
+	<drop event="Harvest" name="resourceWood" count="30" tag="oreWoodHarvest"/>
+	<property name="SortOrder2" value="0120"/> 
+</block>
+
+  </append>
+</configs>

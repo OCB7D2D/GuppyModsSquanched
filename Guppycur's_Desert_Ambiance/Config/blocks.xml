@@ -1,0 +1,86 @@
+<configs>
+	<append xpath="/blocks">
+  
+    <block name="guppyDesertAmbianceBlock">
+      <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="UnlockedBy" value="perkLivingOffTheLand,plantedAloe1Schematic"/>
+      <property name="Material" value="Mcorn"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="#@modfolder:Resources/guppyDesertAmbianceBlock.unity3d?guppyDesertAmbianceBlock.prefab"/>
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+      <property name="BigDecorationRadius" value="4"/>
+      <property name="PlantGrowing.Next" value="guppyplantedAloeAmbianceBlock"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+		</block>  
+    
+    <block name="guppyplantedAloeAmbianceBlock">
+      <property name="Extends" value="cropsGrowingMaster"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="plantedAloe1"/>
+      <property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+      <property name="PlantGrowing.Next" value="guppyDesertAmbianceBlock"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+    </block> 
+
+    <block name="guppyDesertAmbianceBlockmed">
+      <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="UnlockedBy" value="perkLivingOffTheLand,plantedAloe1Schematic"/>
+      <property name="Material" value="Mcorn"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="#@modfolder:Resources/guppyDesertAmbianceBlock.unity3d?guppyDesertAmbianceBlockmed.prefab"/>
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+      <property name="BigDecorationRadius" value="4"/>
+      <property name="PlantGrowing.Next" value="guppyplantedAloeAmbianceBlockmed"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+		</block>  
+    
+    <block name="guppyplantedAloeAmbianceBlockmed">
+      <property name="Extends" value="cropsGrowingMaster"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="plantedAloe1"/>
+      <property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+      <property name="PlantGrowing.Next" value="guppyDesertAmbianceBlockmed"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+    </block> 
+
+    <block name="guppyDesertAmbianceBlocksmall">
+      <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="UnlockedBy" value="perkLivingOffTheLand,plantedAloe1Schematic"/>
+      <property name="Material" value="Mcorn"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="Model" value="#@modfolder:Resources/guppyDesertAmbianceBlock.unity3d?guppyDesertAmbianceBlocksmall.prefab"/>
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+      <property name="BigDecorationRadius" value="4"/>
+      <property name="PlantGrowing.Next" value="guppyplantedAloeAmbianceBlocksmall"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+		</block>  
+    
+    <block name="guppyplantedAloeAmbianceBlocksmall">
+      <property name="Extends" value="cropsGrowingMaster"/>
+      <property name="CreativeMode" value="Player"/>
+      <property name="CustomIcon" value="plantedAloe1"/>
+      <property name="Model" value="Entities/Plants/plant_aloe_harvestPrefab"/>
+      <property name="PlantGrowing.Next" value="guppyDesertAmbianceBlocksmall"/>
+      <property name="PlantGrowing.GrowthRate" value="4"/>
+      <property name="PlantGrowing.IsRandom" value="true"/>
+      <property name="PlantGrowing.FertileLevel" value="1"/>      
+      <drop event="Destroy" name="plantedAloe1" count="1"/>
+    </block> 	
+  
+  </append>
+</configs>

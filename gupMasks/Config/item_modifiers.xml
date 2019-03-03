@@ -1,0 +1,109 @@
+<configs>
+
+	<append xpath="/item_modifiers">
+
+		<item_modifier name="gupMaskAmericanMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipAmerican"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipAmerican"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskAmerican"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskBritishMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipBritish"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipBritish"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskBritish"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskBurnedMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipBurned"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipBurned"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskBurned"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskClownMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipClown"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipClown"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskClown"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskGhostMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipGhost"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipGhost"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskGhost"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+		
+		<item_modifier name="gupMaskLeatherMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipLeather"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipLeather"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskLeather"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskLeatherClownMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipLeatherClown"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipLeatherClown"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskLeatherClown"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskRussianMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipRussian"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipRussian"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskRussian"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskSatanicMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipSatanic"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipSatanic"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskSatanic"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>
+
+		<item_modifier name="gupMaskSkeletonMod" installable_tags="armorHead" modifier_tags="masks" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<effect_group tiered="false">
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffMaskEquipSkeleton"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffMaskEquipSkeleton"/>
+			</effect_group>
+			<property name="CustomIcon" value="gupMaskSkeleton"/>
+			<property name="DescriptionKey" value="gupMaskModGroupDesc"/>
+		</item_modifier>		
+	
+	</append>
+	
+	<remove xpath="/item_modifiers/item_modifier[@name='modDyeWhite']/property[@name='CreativeMode']"></remove>
+	
+</configs>

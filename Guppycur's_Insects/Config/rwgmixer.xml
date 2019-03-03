@@ -1,0 +1,9 @@
+<configs>
+
+  <insertAfter xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='cave_04']">
+
+	<prefab name="guppyInsectNest1" min_count="3" max_count="10" min_repeat_distance="50" />
+
+   </insertAfter>
+	
+</configs>

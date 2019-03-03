@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Guppycur's Insect Mod" />
+		<Description value="Insect Mod
+		This mod adds insect mound prefabs full of insect sleepers.
+		
+		Place the contents of the Prefabs folder into /gamefolder/data/prefabs !!!
+		"/>
+		<Author value="Guppycur" />
+		<Version value="1.0" />
+		<Website value="http://7daystodie.com" />
+	</ModInfo>
+</xml>

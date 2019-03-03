@@ -1,0 +1,18 @@
+<configs>
+<append xpath="/recipes">
+
+	<recipe name="vehicleGuppyShoppingCartPlaceable" count="1" craft_time="600" craft_area="workbench" tags="workbenchCrafting" >
+		<ingredient name="cntShoppingCartEmpty" count="1"/>
+    <ingredient name="smallEngine" count="1"/>
+    <ingredient name="resourceMetalPipe" count="15"/>  
+    <ingredient name="resourceMechanicalParts" count="4"/>
+		<ingredient name="vehicleWheels" count="4"/>
+	</recipe> 
+
+	<recipe name="vehicleGuppyPushShoppingCartPlaceable" count="1" craft_time="6" craft_area="workbench" >
+		<ingredient name="cntShoppingCartEmpty" count="1"/>
+    <ingredient name="resourceOil" count="1"/>  
+	</recipe>   
+  
+</append>
+</configs>

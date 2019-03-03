@@ -1,0 +1,53 @@
+<configs>
+	<append xpath="/entity_classes">
+
+    <entity_class name="guppyDustDevil" extends="animalTemplateTimid">
+        <property name="Tags" value="entity,zombie,normal"/>
+        				<property name="AvatarController" value="AvatarAnimalController"/>
+        <property name="Mesh" value="#@modfolder:Resources/TinsDustDevils.unity3d?guppyDustDevil.prefab"/> 
+        <property name="WalkType" value="7"/>
+        <property name="Mass" value="180"/>
+        <property name="HasRagdoll" value="false"/>		
+        <property name="RootMotion" value="false"/>
+        <property name="RotateToGround" value="false"/>
+        <property name="HandItem" value="meleeHandZombieWorker"/>
+        <property name="MaxTurnSpeed" value="250"/>
+        <property name="MoveSpeed" value=".45"/>
+        <property name="MoveSpeedPanic" value=".55"/>      
+        <property name="MoveSpeedAggro" value="1.2, 1.5"/> 
+        <property name="CanClimbLadders" value="true"/>
+        <property name="JumpMaxDistance" value="2.8, 3.9"/>
+        <property name="ExperienceGain" value="750"/>
+        <effect_group name="Base Effects">
+            <passive_effect name="HealthMax" operation="base_set" value="360"/>
+            <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+            <passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+        </effect_group>				
+    </entity_class>	 
+
+  	<entity_class name="guppySandStorm" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,zombie,normal"/>
+				<property name="AvatarController" value="AvatarAnimalController"/>
+				<property name="Mesh" value="#@modfolder:Resources/guppySandStorm.unity3d?guppySandStorm.prefab"/> 
+				<property name="WalkType" value="7"/>
+				<property name="Mass" value="180"/>
+				<property name="HasRagdoll" value="false"/>		
+				<property name="RootMotion" value="false"/>
+  			<property name="RotateToGround" value="false"/>
+				<property name="HandItem" value="meleeHandZombieWorker"/>
+        <property name="MaxTurnSpeed" value="250"/>
+        <property name="MoveSpeed" value=".45"/>
+        <property name="MoveSpeedPanic" value=".55"/>      
+        <property name="MoveSpeedAggro" value="1.2, 1.5"/> 
+        <property name="CanClimbLadders" value="true"/>
+        <property name="JumpMaxDistance" value="2.8, 3.9"/>
+        <property name="ExperienceGain" value="750"/>
+				<effect_group name="Base Effects">
+					<passive_effect name="HealthMax" operation="base_set" value="360"/>
+					<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/>
+				</effect_group>				
+		</entity_class>	    
+
+	</append>
+</configs>

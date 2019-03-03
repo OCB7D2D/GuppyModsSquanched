@@ -1,0 +1,11 @@
+<configs>
+
+	<append xpath="/entitygroups">
+	
+		<entitygroup name="guppyInsectsGroup">
+			<entity name="animalGuppyInsect"/>
+		</entitygroup>
+	
+	</append>
+	
+</configs> 

@@ -1,0 +1,15 @@
+<configs>
+  <append xpath="/buffs">
+      <buff name="GuppyTime" name_key="buffGuppyTime_name" description_key="buffGuppyTime_desc">
+        <stack_type value="ignore"/>
+        <duration value="0"/>
+        <update_rate value="1"/>      
+          <effect_group>
+              <requirement name="EntityTagCompare" tags="player"/>
+              <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabWithAnimationsToEntity,SCore" part="TimePiece" prefab="#@modfolder:Resources/guppyWorkingWatchUIElement.unity3d?guppyWorkingWatchUIElement" parent_transform="CameraNode" local_offset="0,.3,-1" local_rotation="0,180,0"/>
+              <triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="guppyWorkingWatchUIElement" />    
+              <triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="guppyWorkingWatchUIElement" />  
+          </effect_group>
+      </buff>
+  </append>
+</configs>

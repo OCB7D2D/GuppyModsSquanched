@@ -1,0 +1,149 @@
+<configs>
+	<append xpath="/blocks">
+
+    <block name="guppyWorkingClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyWorkingClock.unity3d?guppyWorkingClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyWorkingClock" /> 
+      <property name="CanPickup" value="true" />      
+    </block>	
+    
+    <block name="guppyDigitalClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyDigitalClock.unity3d?guppyDigitalClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyDigitalClock" /> 
+      <property name="CanPickup" value="true" />
+    </block>    
+
+<!--    
+    <block name="guppyWorkingWatchBlock">
+      <property name="Class" value="ClockDMT, Mods"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyWorkingWatch.unity3d?guppyWorkingWatch.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyWorkingWatch" />      
+    </block>	
+-->    
+
+    <block name="guppyCuckooClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyCuckooClock.unity3d?guppyCuckooClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyCuckooClock" />    
+      <property name="DisplayType" value="blockMulti"/>
+      <property name="MultiBlockDim" value="1,2,1"/> 
+      <property name="ModelOffset" value="0,.3,0"/> 
+      <property name="CanPickup" value="true" />      
+    </block>	
+    
+    <block name="guppyCuckooClockZombie">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/guppyCuckooClockZombie.unity3d?guppyCuckooClockZombie.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyCuckooClockZombie" />    
+      <property name="DisplayType" value="blockMulti"/>
+      <property name="MultiBlockDim" value="1,2,1"/> 
+      <property name="ModelOffset" value="0,.3,0"/>  
+      <property name="CanPickup" value="true" />      
+    </block> 
+	
+    <block name="guppyWorkingVanillaClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/gupWorkingVanillaClock.unity3d?guppyWorkingVanillaClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyWorkingVanillaClock" />    
+      <property name="CanPickup" value="true" />      
+    </block>
+	
+    <block name="guppySmallDeskClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/gupSmallDeskClock.unity3d?guppySmallDeskClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppySmallDeskClock" />    
+      <property name="CanPickup" value="true" />      
+    </block>
+
+    <block name="guppyGrandfatherClock">
+      <property name="Class" value="ClockDMT, SCore"/>
+      <property name="Material" value="Mmetal_weak"/>
+      <property name="Place" value="TowardsPlacer"/>
+      <property name="Shape" value="ModelEntity"/>
+      <property name="PlaceEverywhere" value="true"/>
+      <property name="Model" value="#@modfolder:Resources/gupGrandfatherClock.unity3d?guppyGrandfatherClock.prefab"/>
+      <property name="ImposterExchange" value="imposterBlock" param1="9"/>
+      <property class="RepairItems"> 
+	  <property name="resourceSpring" value="1"/> </property>
+      <drop event="Harvest" name="resourceSpring" count="1" prob="1" tag="allHarvest"/>
+      <drop event="Destroy" count="0"/>
+      <drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+      <property name="CustomIcon" value="guppyGrandfatherClock" />    
+      <property name="DisplayType" value="blockMulti"/>
+      <property name="MultiBlockDim" value="1,3,1"/> 
+      <property name="CanPickup" value="true" />      
+    </block>	
+    
+  </append>
+</configs>

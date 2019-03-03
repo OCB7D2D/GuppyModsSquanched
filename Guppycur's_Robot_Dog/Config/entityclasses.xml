@@ -1,0 +1,61 @@
+<configs>
+	<append xpath="/entity_classes">
+
+		<entity_class name="guppyRobotDog" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal,rabbit,perkAT01,perkAT02,perkAT03,perkAT04,perkAT05"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityAnimalRabbit"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Weight" value="100"/>
+			<property name="HasRagdoll" value="false"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="30"/>
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/guppyRobotDog.unity3d?guppyRobotDog.prefab"/>
+			<property name="MoveSpeed" value=".08"/>
+      <property name="MoveSpeedPanic" value="0.55"/>      
+			<property name="MoveSpeedAggro" value=".5, 1.25"/> 
+      <property name="JumpMaxDistance" value="6, 7"/>      
+			<property name="HandItem" value="meleeHandAnimalCoyote"/>
+			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="AITask-1" value="Swim"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,30"/>
+      <property name="AITask-3" value="ApproachSpot"/>      
+      <property name="AITarget-1" value="SetAsTargetIfHurt"/>      
+      <property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,50,50"/>      
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="2"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="280"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="resourceScrapIron" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="5"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="2"/>
+			<drop event="Harvest" name="resourceCloth" tag="salvageHarvest" count="12"/>
+      <property name="LootListAlive" value="130"/> 
+      <property name="TimeStayAfterDeath" value="3600"/>
+      <property name="SurfaceCategory" value="metal"/>      
+		</entity_class>	
+    
+	</append>
+</configs>

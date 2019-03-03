@@ -1,0 +1,66 @@
+<configs>
+
+<set xpath="/lootcontainers/lootgroup[@name='automotive']/item[@name='ammoGasCan']/@count">5,30</set>
+
+<insertBefore xpath="/lootcontainers/lootcontainer[@id='1']" >
+    <lootgroup name="guppyVehicleMedical" count="1">
+      <item group="rareMedicine" count="1" prob=".4" />
+      <item group="medicine" count="1" prob=".3" />
+      <item group="cannedfood" count="1" prob=".1" />  
+    </lootgroup>
+
+    <lootgroup name="guppyVehicleLawMil" count="1">
+      <item group="sportingGoods" prob=".2" />
+      <item group="militaryArmor" prob=".2" />
+      <item group="weaponsMilitaryGuns+ammo" prob=".2" />
+      <item group="militaryAmmo" count="1" prob=".2" />
+      <item name="resourceMilitaryFiber" count="1,5" prob=".2" />
+      <item group="modAllT1" prob=".2" />
+      <item group="modAllT2" prob=".2" />
+      <item group="modAllT3" prob=".2" />
+      <item group="cannedfood" prob=".3" />
+    </lootgroup>
+</insertBefore>
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='automotive']/item[@name='resourceHubcap']" >
+  <item name="guppyToolRachetSet" count="1,2" prob="1"/>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='automotive']/item[@name='meleeToolFlashlight02']" >
+  <item name="guppyToolCompressor" count="1" prob="0.4"/>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='rareAutomotive']/item[@name='vehicleWheels']" >
+  <item name="guppyToolRachetSet" count="1,2" prob="1"/>
+  <item name="guppyToolCompressor" count="1" prob="0.4"/>
+</insertAfter>
+<insertAfter xpath="/lootcontainers/lootgroup[@name='tools']/item[@name='resourceRepairKit']" >
+  <item name="guppyToolRachetSet" count="1" prob="0.41"/>
+</insertAfter>
+
+<append xpath="/lootcontainers">
+
+      <!--Vehicle Blocks -->
+      <lootcontainer id="170" count="1" size="6,4" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+         <item group="automotive+tools+junk"/>
+         <item name="armorMiningHelmet" prob="0.035"/>
+         <item group="ammo"/>         
+      </lootcontainer>
+      <!--EMS Vehicle Blocks -->
+      <lootcontainer id="171" count="2" size="6,4" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+         <item group="guppyVehicleMedical" prob=".4" />
+         <item group="automotive+tools+junk"/>        
+      </lootcontainer>
+      <!--Police/Military Vehicle Blocks -->
+      <lootcontainer id="172" count="1" size="6,4" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+         <item group="guppyVehicleLawMil" prob=".4" /> 
+         <item group="automotive+tools+junk"/>        
+      </lootcontainer> 
+      <!--Damaged Vehicle Blocks -->
+      <lootcontainer id="173" count="4" size="6,4" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="baseTemplate">
+        <item group="automotive+tools+junk"/>
+        <item name="armorMiningHelmet" prob="0.035"/>
+        <item group="ammo"/>         
+      </lootcontainer>       
+    
+</append>
+
+</configs>

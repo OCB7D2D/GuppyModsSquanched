@@ -1,0 +1,5 @@
+Key,Source,Context,Changes,English
+guppyFlamethrowerDesc,items,weapons,Burn your enemies.  Burn them all.  Alive, dead, who cares.
+guppyFlamethrower,items,GunFL,,Flamethrower
+ammoNapalmDesc,items,Ammo,New,Whip up a batch of this geneva convention banned stuff to fuel your Flame Thrower,,,,,
+ammoNapalm,items,AmmoN,,Napalm

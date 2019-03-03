@@ -1,0 +1,13 @@
+<configs>
+
+<remove xpath="/lootcontainers/lootcontainer[@id='54']" />
+
+  <insertBefore xpath="/lootcontainers/lootcontainer[@id='55']" >
+    <lootcontainer id="54" count="1,2" size="6,2" sound_open="UseActions/open_shopping_cart" destroy_on_close="true" sound_close="UseActions/close_shopping_cart" loot_quality_template="qualBaseTemplate">
+      <item group="cupboard"/>
+      <item group="beverages"/>
+      <item name="resourceScrapPolymers" count="1,4" prob="0.15"/>
+    </lootcontainer> 
+  </insertBefore>
+
+  </configs>

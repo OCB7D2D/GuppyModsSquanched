@@ -1,0 +1,36 @@
+<configs>
+	<append xpath="/blocks">
+
+      <block name="guppyElevator">
+        <property name="Class" value="DoorSecure" />
+        <property name="Material" value="Mmetal" />
+        <property name="Shape" value="ModelEntity" />
+        <property name="Collide" value="movement,melee,rocket,bullet" />
+        <property name="Tag" value="Door" />
+        <property name="Place" value="Door" />
+        <property name="PlaceEverywhere" value="true" />
+        <property name="Model" value="#@modfolder:Resources/GuppyElevator.unity3d?guppyElevatorPrefab.prefab"/>
+        <property name="ModelOffset" value="0,0,0" />
+        <property name="MultiBlockDim" value="3,7,2" />
+<property name="ModelOffset" value="0,0.5,0"/>   		
+        <property name="PassThroughDamage" value="true" />
+        <property name="LightOpacity" value="1" />
+        <property name="Shape" value="ModelEntity" />
+        <property name="CustomIcon" value="guppyElevator" />         
+        <property name="FuelValue" value="300" />
+        <property name="ImposterExchange" value="imposterCTRPlate" param1="35" />
+        <property name="OpenSound" value="open_door_wood" />
+        <property name="CloseSound" value="close_door_wood" />
+        <property class="RepairItems">
+          <property name="resourceForgedIron" value="20" />
+        </property>
+        <property name="CustomUpgradeSound" value="place_block_wood" />
+        <drop event="Harvest" name="resourceForgedIron" count="6" tool_category="Disassemble"/>
+        <drop event="Destroy" count="0" />
+        <property name="Group" value="Building,Basics" />
+        <property name="EconomicValue" value="5" />
+        <property name="EconomicBundleSize" value="10" />
+      </block>
+	  
+	</append>
+</configs>

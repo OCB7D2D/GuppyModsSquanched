@@ -1,0 +1,16 @@
+<configs>
+
+<insertAfter xpath="/blocks/block[@name='cntShoppingCartEmpty']/property[@name='EconomicValue']">
+	<property name="CanPickup" value="true" param1="cntShoppingCartEmpty"/>
+</insertAfter>
+
+<insertAfter xpath="/blocks/block[@name='cntShoppingCart']/property[@name='FilterTags']">
+  <property name="DowngradeBlock" value="cntShoppingCartEmpty"/>
+</insertAfter>
+
+<remove xpath="/blocks/block[@name='cntShoppingCart']/drop[@name='terrStone']" />
+<remove xpath="/blocks/block[@name='cntShoppingCart']/drop[@name='resourceMechanicalParts']" />
+<remove xpath="/blocks/block[@name='cntShoppingCart']/drop[@name='resourceScrapIron']" />
+<remove xpath="/blocks/block[@name='cntShoppingCart']/drop[@name='scrapMetalPile']" />
+
+</configs>

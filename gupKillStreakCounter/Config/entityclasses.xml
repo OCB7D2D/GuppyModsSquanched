@@ -1,0 +1,12 @@
+<configs>
+	
+<!-- 	<append xpath="entity_classes/entity[@name='playerMale']">
+
+		<effect_group name="Guppy Kill Count">
+			<triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="buffguppyKillZombie,buffguppyKillPlayer"/>
+			<triggered_effect trigger="onSelfRespawn" action="AddBuff" target="self" buff="buffguppyKillZombie,buffguppyKillPlayer"/>		
+		</effect_group>
+
+    </append> -->
+	
+</configs>

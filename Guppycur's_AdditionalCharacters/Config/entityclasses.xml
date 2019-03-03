@@ -1,0 +1,387 @@
+<configs>
+
+	<append xpath="/entity_classes">
+
+		<entity_class name="humanGuppyOldManAlive" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyOldManAlive.unity3d?humanGuppyOldManAlive"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>   
+    
+		<entity_class name="zombieGuppyOldManInfected" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyOldManInfected.unity3d?zombieGuppyOldManInfected"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 
+    
+    <entity_class name="zombieGuppyOldManZombie" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyOldManZombie.unity3d?zombieGuppyOldManZombie"/> 
+			<property name="WalkType" value="5"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 
+    
+		<entity_class name="humanGuppySophiaAlive" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppySophiaAlive.unity3d?humanGuppySophiaAlive"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>    
+
+		<entity_class name="zombieGuppyBaldMan01" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyBaldMan01.unity3d?zombieGuppyBaldMan01"/> 
+			<property name="WalkType" value="3"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="165"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>  
+
+		<entity_class name="humanGuppyArmoredMan01Bandit" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyArmoredMan01Bandit.unity3d?humanGuppyArmoredMan01Bandit"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+
+    <entity_class name="zombieGuppyBiomechMutant01" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyBiomechMutant01.unity3d?zombieGuppyBiomechMutant01"/> 
+			<property name="WalkType" value="2"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group> 
+		</entity_class>   
+   
+ 		<entity_class name="humanGuppyMalePatient01" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyMalePatient01.unity3d?humanGuppyMalePatient01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="180"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 
+
+		<entity_class name="humanGuppyThugBandit01" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyThugBandit01.unity3d?humanGuppyThugBandit01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>
+    
+		<entity_class name="humanGuppyThugBandit02" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyThugBandit02.unity3d?humanGuppyThugBandit02"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="RunawayFromEntity" data="EntityZombie,EntityEnemyAnimal"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityZombie,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>    
+
+		<entity_class name="zombieGuppyRomero01" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyRomero01.unity3d?zombieGuppyRomero01"/> 
+			<property name="WalkType" value="6"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>
+    
+		<entity_class name="zombieGuppyBlackCop01" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyBlackCop01.unity3d?zombieGuppyBlackCop01"/> 
+			<property name="WalkType" value="4"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>    
+   
+		<entity_class name="humanGuppyThugBandit03" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyThugBandit03.unity3d?humanGuppyThugBandit03"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<property name="HandItem" value="meleeHandZombieStrongFeral"/> 
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="RunawayFromEntity" data="EntityZombie,EntityEnemyAnimal"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityPlayer,0,EntityZombie,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+
+		<entity_class name="humanGuppyHero01" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyHero01.unity3d?humanGuppyHero01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<property name="IsEnemyEntity" value="false"/>         
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+
+		<entity_class name="humanGuppyJapaneseNinja02" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyJapaneseNinja02.unity3d?humanGuppyJapaneseNinja02"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<property name="IsEnemyEntity" value="false"/>         
+			<property name="HandItem" value="meleeHandZombieStrongFeral"/> 
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+
+		<entity_class name="humanGuppyTrader01" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyTrader01.unity3d?humanGuppyTrader01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<property name="IsEnemyEntity" value="false"/>      
+			<property name="HandItem" value="meleeHandZombieStrongFeral"/> 
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+    
+		<entity_class name="zombieGuppyGermanCosplay" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyGermanCosplay.unity3d?zombieGuppyGermanCosplay"/> 
+			<property name="WalkType" value="2"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class> 
+
+		<entity_class name="zombieGuppyCop02" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyCop02.unity3d?zombieGuppyCop02"/> 
+			<property name="WalkType" value="6"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>     
+    
+   </append>
+</configs>

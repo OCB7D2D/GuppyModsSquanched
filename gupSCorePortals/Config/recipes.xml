@@ -1,0 +1,36 @@
+<configs>
+
+	<append xpath="/recipes"> 
+
+		<recipe name="guppyFuturePortal2" count="1" craft_time="1200" craft_area="workbench" tags="workbenchCrafting,learnable" >
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe> 		
+		<recipe name="guppyFuturePortal3" count="1" craft_time="1200" craft_area="workbench" tags="workbenchCrafting,learnable" >
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe> 
+		
+		<recipe name="guppyFuturePortal4" count="1" craft_time="1200" craft_area="workbench" tags="workbenchCrafting,learnable" >
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe> 	
+
+		<recipe name="guppyFuturePortal5" count="1" craft_time="1200" craft_area="workbench" tags="workbenchCrafting,learnable" >
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe> 
+
+		<recipe name="guppyFuturePortal6" count="1" craft_time="1200" craft_area="workbench" tags="workbenchCrafting,learnable" >
+			<ingredient name="resourceForgedSteel" count="150"/>
+			<ingredient name="resourceMechanicalParts" count="50"/>
+			<ingredient name="resourceElectricParts" count="50"/>
+		</recipe> 		
+	
+	</append>
+	
+</configs>
